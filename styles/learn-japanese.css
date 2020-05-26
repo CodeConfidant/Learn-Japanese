@@ -104,8 +104,6 @@ a:hover {
 }
 
 .table-main-heading {
-    position: absolute;
-    left: 43%;
     font-size: 2rem;
     font-weight: bolder;
     font-style: oblique;
