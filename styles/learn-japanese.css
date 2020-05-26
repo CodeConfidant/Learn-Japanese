@@ -1,0 +1,196 @@
+body {
+    overflow-x: auto;
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+    margin: 0%;
+    padding: 0%;
+    opacity: 95%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: black;
+}
+
+header, footer {
+    padding: 1%;
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+
+span {
+    color: whitesmoke;
+    display: block;
+    text-align: center;
+}
+
+nav {
+    padding: 1.5rem;
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+    position: fixed;
+    top: 0;
+    background-color: black;
+}
+
+table {
+    padding: 1%;
+    opacity: 60%;
+    background-color: whitesmoke;
+    border-color: black;
+    border-style: solid;
+    border-radius: 15px;
+    border-width: thick;
+    margin: auto;
+    width: 50%;
+}
+
+td, tr {
+    height: 50px; 
+    width: 50px;
+    text-align: center; 
+    vertical-align: middle;
+}
+
+td, th {
+    border: thin solid black;
+    border-radius: 2px;
+}
+
+a {
+    padding: 12px;
+    text-decoration: none;
+    background-color: silver;
+    color: black;
+    border: thin transparent;
+    border-radius: 2px;
+    font-style: oblique;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+a:hover {
+    color: dodgerblue;
+}
+
+.home-heading {
+    color: whitesmoke;
+    font-style: oblique;
+    font-weight: bolder;
+    font-size: 2.5rem;
+    position: absolute;
+    top: 25%;
+    left: 44%;
+}
+
+.main-heading {
+    color: whitesmoke;
+    font-style: oblique;
+    font-weight: bolder;
+    font-size: 2.5rem;
+    padding: 50px;
+}
+
+.table-main-heading {
+    position: absolute;
+    left: 43%;
+    font-size: 2rem;
+    font-weight: bolder;
+    font-style: oblique;
+    border: thin transparent;
+}
+
+.box-heading {
+    color: black;
+    font-style: oblique;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.box-text {
+    color: black;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5rem;
+}
+
+.box-img {
+    height: 450px;
+    width: 100%;
+    display: block;
+    border: transparent;
+    border-radius: 15px;
+}
+
+.copy-heading {
+    color: whitesmoke;
+    font-style: italic;
+    font-weight: lighter;
+    font-size: 1rem;
+}
+
+.box {
+    padding: 1%;
+    height: 100%;
+    margin: 0%;
+    display: inline-block;
+    text-align: center;
+    opacity: 60%;
+    background-color: whitesmoke;
+    border-top: thin solid black;
+    border-left: transparent;
+    border-right: transparent;
+    border-bottom: transparent;
+    border-radius: 15px;
+    border-width: thin;
+}
+
+.col-2 {
+    width: 47.8%;
+}
+
+.col-3 {
+    width: 31.1%;
+}
+
+.col-4 {
+    width: 22.7%;
+}
+
+.row {
+    width: 100%;
+}
+
+@media only screen and (max-width: 1460px) {
+    .box {
+        background-color: black;
+    }
+
+    .box-heading, .box-text {
+        color: whitesmoke;
+    }
+
+    .col-2, .col-3, .col-4 {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 820px) {
+    table {
+        width: 100%;
+    }
+
+    .home-heading {
+        left: 25%;
+    }
+
+    .table-main-heading {
+        left: 30%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    nav {
+        text-align: justify;
+    }
+}
