@@ -14,7 +14,6 @@ header, footer {
     padding: 1%;
     margin: auto;
     display: block;
-    text-align: center;
 }
 
 span {
@@ -25,12 +24,15 @@ span {
 
 nav {
     padding: 1.5rem;
-    width: 100%;
+    width: auto;
     height: auto;
     border-radius: 2px;
-    position: fixed;
-    top: 0;
+    border-style: hidden;
     background-color: black;
+    position: fixed;
+    top: 20%;
+    display: block;
+    text-align: center;
 }
 
 table {
@@ -43,6 +45,12 @@ table {
     border-width: thick;
     margin: auto;
     width: 50%;
+}
+
+td {
+    font-size: larger;
+    font-weight: bold;
+    font-style: italic;
 }
 
 td, tr {
@@ -60,13 +68,16 @@ td, th {
 a {
     padding: 12px;
     text-decoration: none;
-    background-color: silver;
-    color: black;
-    border: thin transparent;
+    background-color: black;
+    color: whitesmoke;
+    border: thin transparent black;
     border-radius: 2px;
     font-style: oblique;
     font-weight: bold;
     font-size: 1rem;
+    display: block;
+    width: 200px;
+    text-align: center;
 }
 
 a:hover {
@@ -78,9 +89,8 @@ a:hover {
     font-style: oblique;
     font-weight: bolder;
     font-size: 2.5rem;
-    position: absolute;
-    top: 25%;
-    left: 44%;
+    display: block;
+    text-align: center;
 }
 
 .main-heading {
@@ -89,6 +99,8 @@ a:hover {
     font-weight: bolder;
     font-size: 2.5rem;
     padding: 50px;
+    display: block;
+    text-align: center;
 }
 
 .table-main-heading {
@@ -127,6 +139,8 @@ a:hover {
     font-style: italic;
     font-weight: lighter;
     font-size: 1rem;
+    display: block;
+    text-align: center;
 }
 
 .box {
@@ -178,6 +192,15 @@ a:hover {
 @media only screen and (max-width: 820px) {
     table {
         width: 100%;
+    }
+
+    nav {
+        position: relative;
+    }
+
+    a {
+        display: inline-block;
+        width: auto;
     }
 
     .home-heading {
