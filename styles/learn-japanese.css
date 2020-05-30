@@ -84,6 +84,10 @@ a:hover {
     color: dodgerblue;
 }
 
+.nav-button {
+    display: none;
+}
+
 .home-heading {
     color: whitesmoke;
     font-style: oblique;
@@ -196,9 +200,24 @@ a:hover {
         position: relative;
     }
 
-    a {
-        display: inline-block;
-        width: auto;
+    #nav-links {
+        display: none;
+    }
+
+    #nav-links a {
+        width: 100%;
+    }
+
+    .nav-button {
+        display: block;
+        position: absolute;
+        right: 5%;
+        top: 10%;
+        padding: 2%;
+        width: 40px;
+        height: 20px;
+        border: thin solid dodgerblue;
+        border-radius: 2px;
     }
 
     .home-heading {
@@ -207,11 +226,5 @@ a:hover {
 
     .table-main-heading {
         left: 30%;
-    }
-}
-
-@media only screen and (max-width: 500px) {
-    nav {
-        text-align: justify;
     }
 }

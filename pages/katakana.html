@@ -17,11 +17,14 @@
     <body>
         <header>
             <nav>
-                <a href="../index.html">Home</a>
-                <a href="hiragana.html">Hiragana</a>
-                <a href=# style="color:dodgerblue;">Katakana</a>
-                <a href="kanji.html">Kanji</a>
-                <a href="common.html">Common Phrases</a>
+                <a href="javascript:void(0);" onclick="navchange()" class="nav-button">Menu</a>
+                <div id="nav-links">
+                    <a href="../index.html">Home</a>
+                    <a href="hiragana.html">Hiragana</a>
+                    <a href=# style="color:dodgerblue;">Katakana</a>
+                    <a href="kanji.html">Kanji</a>
+                    <a href="common.html">Common Phrases</a>
+                </div>
             </nav>
             <h1 class="main-heading">カタカナ <br/> Katakana</h1> 
         </header>
@@ -409,5 +412,8 @@
         <footer>
             <h3 class="copy-heading">&copy; 2020 Drew Hainer</h2>
         </footer>
+
+        <script type="application/javascript" src="../scripts/learn-japanese.js"></script>
+        <noscript>Your browser does not support Javascript!</noscript>
     </body>
 </html>
