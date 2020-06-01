@@ -47,22 +47,14 @@ table {
     width: 50%;
 }
 
-td {
-    font-size: larger;
-    font-weight: bold;
-    font-style: italic;
-}
-
-td, tr {
-    height: 50px; 
-    width: 50px;
-    text-align: center; 
-    vertical-align: middle;
-}
-
 td, th {
+    text-align: center;
     border: thin solid black;
     border-radius: 2px;
+    padding: 1rem;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 
 a {
@@ -88,52 +80,22 @@ a:hover {
     display: none;
 }
 
-.home-heading {
-    color: whitesmoke;
-    font-style: oblique;
-    font-weight: bolder;
-    font-size: 2.5rem;
-    display: block;
-    text-align: center;
-}
-
 .main-heading {
     color: whitesmoke;
     font-style: oblique;
     font-weight: bolder;
     font-size: 2.5rem;
-    padding: 50px;
     display: block;
     text-align: center;
 }
 
-.table-main-heading {
-    font-size: 2rem;
+.secondary-heading {
+    color: whitesmoke;
+    font-style: oblique;
     font-weight: bolder;
-    font-style: oblique;
-    border: thin transparent;
-}
-
-.box-heading {
-    color: black;
-    font-style: oblique;
-    font-weight: bold;
     font-size: 2rem;
-}
-
-.box-text {
-    color: black;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.5rem;
-}
-
-.box-img {
-    height: 450px;
-    width: 100%;
     display: block;
-    border: transparent;
-    border-radius: 15px;
+    text-align: center;
 }
 
 .copy-heading {
@@ -145,53 +107,7 @@ a:hover {
     text-align: center;
 }
 
-.box {
-    padding: 1%;
-    height: 100%;
-    margin: 0%;
-    display: inline-block;
-    text-align: center;
-    opacity: 60%;
-    background-color: whitesmoke;
-    border-top: thin solid black;
-    border-left: transparent;
-    border-right: transparent;
-    border-bottom: transparent;
-    border-radius: 15px;
-    border-width: thin;
-}
-
-.col-2 {
-    width: 47.8%;
-}
-
-.col-3 {
-    width: 31.1%;
-}
-
-.col-4 {
-    width: 22.7%;
-}
-
-.row {
-    width: 100%;
-}
-
-@media only screen and (max-width: 1460px) {
-    .box {
-        background-color: black;
-    }
-
-    .box-heading, .box-text {
-        color: whitesmoke;
-    }
-
-    .col-2, .col-3, .col-4 {
-        width: 100%;
-    }
-}
-
-@media only screen and (max-width: 840px) {
+@media only screen and (max-width: 860px) {
     table {
         width: 100%;
     }
