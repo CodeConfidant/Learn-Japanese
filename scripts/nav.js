@@ -2,12 +2,12 @@ var nav_container = document.getElementById("nav-links");
 var nav_button = document.getElementById("nav-button");
 
 navchange = () => {
-    if (nav_container.style.display === "block") {
-      nav_container.style.display = "none"; 
-    } 
-    else {
-      nav_container.style.display = "block";
-    }
+  if (nav_container.style.display === "block") {
+    nav_container.style.display = "none";
+  } 
+  else {
+    nav_container.style.display = "block";
+  }
 };
 
 navhover_on = () => {
