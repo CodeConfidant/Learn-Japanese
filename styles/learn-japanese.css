@@ -112,6 +112,11 @@ a:hover {
         width: 100%;
     }
 
+    td, th {
+        padding: 1%;
+        font-size: 1.1rem;
+    }
+
     nav {
         position: relative;
     }
