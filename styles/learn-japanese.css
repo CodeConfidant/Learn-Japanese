@@ -76,7 +76,7 @@ a:hover {
     color: dodgerblue;
 }
 
-form {
+#search-form {
     width: 100%;
     height: auto;
     background-color: black;
@@ -94,6 +94,9 @@ form {
     padding: 1rem;
     border: 20px solid black;
     border-radius: 2px;
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 1rem;
 }
 
 #submit-button {
@@ -103,6 +106,13 @@ form {
     padding: 1rem;
     border: hidden;
     border-radius: 2px;
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 1.2rem;
+}
+
+#submit-button:hover {
+    color: dodgerblue;
 }
 
 #nav-button {
