@@ -1,4 +1,4 @@
-// Remove all number characters from String.
+// Remove number characters from argument string and return.
 trimNumbers = (arg) => {
     for (var i of arg){
         if (i === "0"){
@@ -45,16 +45,157 @@ trimNumbers = (arg) => {
     return arg
 };
 
+// Remove whitespace characters from argument string and return.
 trimSpace = (arg) => {
     arg = arg.replace(/ /g, "")
     return arg
 };
 
+// Remove special characters from argument string and return.
+trimSpec = (arg) => {
+    for (var i of arg){
+        if (i === "`"){
+            arg = arg.replace("`", "")
+        }
+
+        if (i === "~"){
+            arg = arg.replace("~", "")
+        }
+
+        if (i === "!"){
+            arg = arg.replace("!", "")
+        }
+
+        if (i === "@"){
+            arg = arg.replace("@", "")
+        }
+
+        if (i === "#"){
+            arg = arg.replace("#", "")
+        }
+
+        if (i === "$"){
+            arg = arg.replace("$", "")
+        }
+
+        if (i === "%"){
+            arg = arg.replace("%", "")
+        }
+
+        if (i === "^"){
+            arg = arg.replace("^", "")
+        }
+
+        if (i === "&"){
+            arg = arg.replace("&", "")
+        }
+
+        if (i === "*"){
+            arg = arg.replace("*", "")
+        }
+
+        if (i === "("){
+            arg = arg.replace("(", "")
+        }
+
+        if (i === ")"){
+            arg = arg.replace(")", "")
+        }
+
+        if (i === "_"){
+            arg = arg.replace("_", "")
+        }
+
+        if (i === "-"){
+            arg = arg.replace("-", "")
+        }
+
+        if (i === "+"){
+            arg = arg.replace("+", "")
+        }
+
+        if (i === "="){
+            arg = arg.replace("=", "")
+        }
+
+        if (i === "|"){
+            arg = arg.replace("|", "")
+        }
+
+        if (i === "}"){
+            arg = arg.replace("}", "")
+        }
+
+        if (i === "{"){
+            arg = arg.replace("{", "")
+        }
+
+        if (i === "]"){
+            arg = arg.replace("]", "")
+        }
+
+        if (i === "["){
+            arg = arg.replace("[", "")
+        }
+
+        if (i === "'"){
+            arg = arg.replace("'", "")
+        }
+
+        if (i === ":"){
+            arg = arg.replace(":", "")
+        }
+
+        if (i === ";"){
+            arg = arg.replace(";", "")
+        }
+
+        if (i === "/"){
+            arg = arg.replace("/", "")
+        }
+
+        if (i === "?"){
+            arg = arg.replace("?", "")
+        }
+
+        if (i === ">"){
+            arg = arg.replace(">", "")
+        }
+
+        if (i === "<"){
+            arg = arg.replace("<", "")
+        }
+
+        if (i === "."){
+            arg = arg.replace(".", "")
+        }
+
+        if (i === ","){
+            arg = arg.replace(",", "")
+        }   
+    }
+
+    return arg
+};
+
+// Remove line-break characters from argument string and return.
+trimLineBreak = (arg) => {
+    arg = arg.replace(/\\/g, "")
+    return arg
+};
+
+// Remove numbers, whitespace, special, and line break characters from argument string and return.
+trimAll = (arg) => {
+    arg = trimNumbers(arg)
+    arg = trimSpace(arg)
+    arg = trimSpec(arg)
+    arg = trimLineBreak(arg)
+    return arg
+};
+
 // Handle the input & submission.
 submit_handler = () => {
-    var search_value = document.getElementById("search-box").value.toLowerCase().trim()
-    search_value = trimNumbers(search_value)
-    search_value = trimSpace(search_value)
+    var search_value = trimAll(document.getElementById("search-box").value.toLowerCase())
     console.log(search_value)
     document.getElementById("search-box").value = ""
 };
