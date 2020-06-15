@@ -144,7 +144,9 @@ a:hover {
     font-weight: lighter;
     font-size: 1rem;
     display: block;
-    text-align: center;
+    position: fixed;
+    bottom: 0%;
+    left: 45%;
 }
 
 .button-container {
@@ -189,6 +191,10 @@ a:hover {
 
     #search-box {
         width: 50%;
+    }
+
+    .copy-heading {
+        left: 40%;
     }
 
     .secondary-heading {
