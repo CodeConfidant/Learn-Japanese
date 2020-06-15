@@ -193,9 +193,13 @@ trimAll = (arg) => {
     return arg
 };
 
+// Reset value of input.
+reset = () => {
+    document.getElementById("search-box").value = ""
+};
+
 // Handle the input & submission.
 submit_handler = () => {
     var search_value = trimAll(document.getElementById("search-box").value.toLowerCase())
     console.log(search_value)
-    document.getElementById("search-box").value = ""
 };

@@ -99,9 +99,9 @@ a:hover {
     font-size: 1rem;
 }
 
-#submit-button {
+#submit-button, #reset-button {
     width: 100px;
-    display: block;
+    display: inline-block;
     background-color: whitesmoke;
     padding: 1rem;
     border: hidden;
@@ -111,9 +111,10 @@ a:hover {
     font-size: 1.2rem;
 }
 
-#submit-button:hover {
+#submit-button:hover, #reset-button:hover {
     color: dodgerblue;
 }
+
 
 #nav-button {
     display: none;
@@ -144,6 +145,12 @@ a:hover {
     font-size: 1rem;
     display: block;
     text-align: center;
+}
+
+.button-container {
+    width: auto;
+    height: auto;
+    display: inline-block;
 }
 
 @media only screen and (max-width: 860px) {

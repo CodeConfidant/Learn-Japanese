@@ -30,11 +30,14 @@
 
         <form id="search-form" name="search" rel="search" target="_self" accept-charset="UTF-8" autocomplete="off" autofocus="off">
             <input id="search-box" name="search-box" form="search-form" type="text" value="" minlength="1" maxlength="25" placeholder="Enter Query" autocomplete="off" autofocus="off"/>
-            <button id="submit-button" name="submit-button" form="search-form" type="button" autofocus="off" onclick="submit_handler(); return false">Submit</button>
+            <div class="button-container">
+                <button id="reset-button" name="reset-button" form="search-form" type="button" autofocus="off" onclick="reset(); return false">Reset</button>
+                <button id="submit-button" name="submit-button" form="search-form" type="button" autofocus="off" onclick="submit_handler(); return false">Search</button>
+            </div>
         </form> 
 
         <footer>
-            <h3 class="copy-heading">&copy; 2020 Drew Hainer</h2>
+            <h3 class="copy-heading" style="position: fixed; left: 45%; bottom: 0;">&copy; 2020 Drew Hainer</h2>
         </footer>
 
         <script type="application/javascript" src="scripts/nav.js"></script>
