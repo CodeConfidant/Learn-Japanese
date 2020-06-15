@@ -100,12 +100,12 @@ a:hover {
 }
 
 #submit-button {
-    width: 15%;
+    width: 100px;
     display: block;
     background-color: whitesmoke;
     padding: 1rem;
     border: hidden;
-    border-radius: 2px;
+    border-radius: 15px;
     font-style: normal;
     font-weight: lighter;
     font-size: 1.2rem;
@@ -180,7 +180,7 @@ a:hover {
         border-radius: 2px;
     }
 
-    #search-box, #submit-button {
+    #search-box {
         width: 50%;
     }
 
