@@ -193,10 +193,6 @@ a:hover {
         width: 50%;
     }
 
-    .copy-heading {
-        left: 40%;
-    }
-
     .secondary-heading {
         font-size: 1.5rem;
     }
@@ -207,5 +203,17 @@ a:hover {
 
     .table-main-heading {
         left: 30%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .copy-heading {
+        left: 43%;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .copy-heading {
+        left: 35%;
     }
 }
