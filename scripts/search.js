@@ -1,41 +1,49 @@
 
-// JavaScript object containing Hiragana translations and kana.
+// Object containing Hiragana translations and kana.
 var hiragana = [
+
+    // Vowels
     {translation: "a", kana: "ぁ"},
     {translation: "e", kana: "ぇ"},
     {translation: "i", kana: "い"},
     {translation: "o", kana: "お"},
     {translation: "u", kana: "う"},
 
+    // D Consonant
     {translation: "da", kana: "だ"},
     {translation: "de", kana: "で"},
     {translation: "do", kana: "ど"},
     {translation: "du", kana: "づ"},
     
+    // G Consonant
     {translation: "ga", kana: "が"},
     {translation: "ge", kana: "げ"},
     {translation: "gi", kana: "ぎ"},
     {translation: "go", kana: "ご"},
     {translation: "gu", kana: "ぐ"},
     
+    // H Consonant
     {translation: "ha", kana: "は"},
     {translation: "he", kana: "へ"},
     {translation: "hi", kana: "ひ"},
     {translation: "ho", kana: "ほ"},
     {translation: "hu", kana: "ふ"},
     
+    // K Consonant
     {translation: "ka", kana: "か"},
     {translation: "ke", kana: "け"},
     {translation: "ki", kana: "き"},
     {translation: "ko", kana: "こ"},
     {translation: "ku", kana: "く"},
     
+    // M Consonant
     {translation: "ma", kana: "ま"},
     {translation: "me", kana: "め"},
     {translation: "mi", kana: "み"},
     {translation: "mo", kana: "も"},
     {translation: "mu", kana: "む"},
     
+    // N Consonant
     {translation: "n", kana: "ん"},
     {translation: "na", kana: "な"},
     {translation: "ne", kana: "ね"},
@@ -43,18 +51,21 @@ var hiragana = [
     {translation: "no", kana: "の"},
     {translation: "nu", kana: "ぬ"},
     
+    // P Consonant
     {translation: "pa", kana: "ぱ"},
     {translation: "pe", kana: "ぺ"},
     {translation: "pi", kana: "ぴ"},
     {translation: "po", kana: "ぽ"},
     {translation: "pu", kana: "ぷ"},
 
+    // R Consonant
     {translation: "ra", kana: "ら"},
     {translation: "re", kana: "れ"},
     {translation: "ri", kana: "り"},
     {translation: "ro", kana: "ろ"},
     {translation: "ru", kana: "る"},
     
+    // S Consonant
     {translation: "sa", kana: "さ"},
     {translation: "se", kana: "せ"},
     {translation: "si", kana: "し"},
@@ -63,6 +74,7 @@ var hiragana = [
     {translation: "su", kana: "す"},
     {translation: "shu", kana: "す"},
 
+    // T Consonant
     {translation: "ta", kana: "た"},
     {translation: "te", kana: "て"},
     {translation: "ti", kana: "ち"},
@@ -71,13 +83,16 @@ var hiragana = [
     {translation: "tu", kana: "っ"},
     {translation: "tsu", kana: "っ"},
 
+    // W Consonant
     {translation: "wa", kana: "わ"},
     {translation: "wo", kana: "を"},
 
+    // Y Consonant
     {translation: "ya", kana: "や"},
     {translation: "yo", kana: "よ"},
     {translation: "yu", kana: "ゆ"},
 
+    // Z Consonant
     {translation: "za", kana: "ざ"},
     {translation: "ze", kana: "ぜ"},
     {translation: "zi", kana: "じ"},
@@ -85,43 +100,51 @@ var hiragana = [
     {translation: "zu", kana: "ず"}
 ];
 
-// JavaScript object containing Katakana translations and kana.
+// Object containing Katakana translations and kana.
 var katakana = [
+
+    // Vowels
     {translation: "a", kana: "ア"},
     {translation: "e", kana: "エ"},
     {translation: "i", kana: "イ"},
     {translation: "o", kana: "オ"},
     {translation: "u", kana: "ウ"},
 
+    // D Consonant
     {translation: "da", kana: "ダ"},
     {translation: "de", kana: "デ"},
     {translation: "do", kana: "ド"},
     {translation: "du", kana: "ヅ"},
     
+    // G Consonant
     {translation: "ga", kana: "ガ"},
     {translation: "ge", kana: "ゲ"},
     {translation: "gi", kana: "ギ"},
     {translation: "go", kana: "ゴ"},
     {translation: "gu", kana: "グ"},
     
+    // H Consonant
     {translation: "ha", kana: "ハ"},
     {translation: "he", kana: "ヘ"},
     {translation: "hi", kana: "ヒ"},
     {translation: "ho", kana: "ホ"},
     {translation: "hu", kana: "フ"},
     
+    // K Consonant
     {translation: "ka", kana: "カ"},
     {translation: "ke", kana: "ケ"},
     {translation: "ki", kana: "キ"},
     {translation: "ko", kana: "コ"},
     {translation: "ku", kana: "ク"},
     
+    // M Consonant
     {translation: "ma", kana: "マ"},
     {translation: "me", kana: "メ"},
     {translation: "mi", kana: "ミ"},
     {translation: "mo", kana: "モ"},
     {translation: "mu", kana: "ム"},
     
+    // N Consonant
     {translation: "n", kana: "ン"},
     {translation: "na", kana: "ナ"},
     {translation: "ne", kana: "ネ"},
@@ -129,18 +152,21 @@ var katakana = [
     {translation: "no", kana: "ノ"},
     {translation: "nu", kana: "ヌ"},
     
+    // P Consonant
     {translation: "pa", kana: "パ"},
     {translation: "pe", kana: "ペ"},
     {translation: "pi", kana: "ピ"},
     {translation: "po", kana: "ポ"},
     {translation: "pu", kana: "プ"},
 
+    // R Consonant
     {translation: "ra", kana: "ラ"},
     {translation: "re", kana: "レ"},
     {translation: "ri", kana: "リ"},
     {translation: "ro", kana: "ロ"},
     {translation: "ru", kana: "ル"},
     
+    // S Consonant
     {translation: "sa", kana: "サ"},
     {translation: "se", kana: "セ"},
     {translation: "si", kana: "シ"},
@@ -149,6 +175,7 @@ var katakana = [
     {translation: "su", kana: "ス"},
     {translation: "shu", kana: "ス"},
 
+    // T Consonant
     {translation: "ta", kana: "タ"},
     {translation: "te", kana: "テ"},
     {translation: "ti", kana: "チ"},
@@ -157,15 +184,18 @@ var katakana = [
     {translation: "tu", kana: "ツ"},
     {translation: "tsu", kana: "ツ"},
 
+    // W Consonant
     {translation: "wa", kana: "ワ"},
     {translation: "we", kana: "ヱ"},
     {translation: "wi", kana: "ヰ"},
     {translation: "wo", kana: "ヲ"},
 
+    // Y Consonant
     {translation: "ya", kana: "ヤ"},
     {translation: "yo", kana: "ヨ"},
     {translation: "yu", kana: "ユ"},
 
+    // Z Consonant
     {translation: "za", kana: "ザ"},
     {translation: "ze", kana: "ゼ"},
     {translation: "zi", kana: "ジ"},
@@ -173,68 +203,60 @@ var katakana = [
     {translation: "zu", kana: "ズ"}
 ];
 
-// JavaScript object containing Kanji translations, kana, and pronunciations.
+// Object containing Kanji translations, kana, and pronunciations.
 var kanji = [
-    {translation: "ground", kana:"地", pronunciation:"ji"},
-    {translation: "water", kana:"水", pronunciation:"mizu"},
-    {translation: "wind", kana:"風", pronunciation:"kaze"},
-    {translation: "rain", kana:"雨", pronunciation:"ame"},
-    {translation: "fire", kana:"火", pronunciation:"hi"},
-    {translation: "thunder", kana:"雷", pronunciation:"kaminari"},
-
-    {translation: "lake", kana:"湖", pronunciation:"mizumi"},
-    {translation: "island", kana:"島", pronunciation:"shima"},
-    {translation: "mountain", kana:"山", pronunciation:"yama"}
+    {translation: "Ground", kana:"地", pronunciation:"Ji"},
+    {translation: "Water", kana:"水", pronunciation:"Mizu"},
+    {translation: "Wind", kana:"風", pronunciation:"Kaze"},
+    {translation: "Rain", kana:"雨", pronunciation:"Ame"},
+    {translation: "Fire", kana:"火", pronunciation:"Hi"},
+    {translation: "Thunder", kana:"雷", pronunciation:"Kaminari"},
+    {translation: "Lake", kana:"湖", pronunciation:"Mizumi"},
+    {translation: "Island", kana:"島", pronunciation:"Shima"},
+    {translation: "Mountain", kana:"山", pronunciation:"Yama"}
 ];
 
-// JavaScript object containing General translations, kana, and pronunciations.
+// Object containing General translations, kana, and pronunciations.
 var general = [
-    {translation: "hello", kana:"こにちわ", pronunciation:"konichiwa"},
-    {translation: "goodbye", kana:"さよむら", pronunciation:"sayonara"},
-    {translation: "thank-you", kana:"ありがと", pronunciation:"arigato"}
+    {translation: "Hello", kana:"こにちわ", pronunciation:"Konichiwa"},
+    {translation: "Goodbye", kana:"さよむら", pronunciation:"Sayonara"},
+    {translation: "Thank-you", kana:"ありがと", pronunciation:"Arigato"}
 ];
 
 // Remove number characters from argument string and return.
 trimNumbers = (arg) => {
     for (var i of arg){
-        if (i === "0"){
-            arg = arg.replace("0", "")
-        }
-
-        if (i === "1"){
-            arg = arg.replace("1", "")
-        }
-        
-        if (i === "2"){
-            arg = arg.replace("2", "")
-        }
-
-        if (i === "3"){
-            arg = arg.replace("3", "")
-        }
-
-        if (i === "4"){
-            arg = arg.replace("4", "")
-        }
-
-        if (i === "5"){
-            arg = arg.replace("5", "")
-        }
-
-        if (i === "6"){
-            arg = arg.replace("6", "")
-        }
-
-        if (i === "7"){
-            arg = arg.replace("7", "")
-        }
-
-        if (i === "8"){
-            arg = arg.replace("8", "")
-        }
-
-        if (i === "9"){
-            arg = arg.replace("9", "")
+        switch(i) {
+            case "0":
+                arg = arg.replace("0", "");
+                break;
+            case "1":
+                arg = arg.replace("1", "");
+                break;
+            case "2":
+                arg = arg.replace("2", "");
+                break;
+            case "3":
+                arg = arg.replace("3", "");
+                break;
+            case "4":
+                arg = arg.replace("4", "");
+                break;
+            case "5":
+                arg = arg.replace("5", "");
+                break;
+            case "6":
+                arg = arg.replace("6", "");
+                break;
+            case "7":
+                arg = arg.replace("7", "");
+                break;
+            case "8":
+                arg = arg.replace("8", "");
+                break;
+            case "9":
+                arg = arg.replace("9", "");
+                break;
         }
     }
 
@@ -249,126 +271,101 @@ trimSpace = (arg) => {
 
 // Remove special characters from argument string and return.
 trimSpec = (arg) => {
+    arg = arg.replace(/\"/g, "");
+
     for (var i of arg){
-        if (i === "`"){
-            arg = arg.replace("`", "")
+        switch(i) {
+            case "`":
+                arg = arg.replace("`", "");
+                break;
+            case "~":
+                arg = arg.replace("~", "");
+                break;
+            case "!":
+                arg = arg.replace("!", "");
+                break;
+            case "@":
+                arg = arg.replace("@", "");
+                break;
+            case "#":
+                arg = arg.replace("#", "");
+                break;
+            case "$":
+                arg = arg.replace("$", "");
+                break;
+            case "%":
+                arg = arg.replace("%", "");
+                break;
+            case "^":
+                arg = arg.replace("^", "");
+                break;
+            case "&":
+                arg = arg.replace("&", "");
+                break;
+            case "*":
+                arg = arg.replace("*", "");
+                break;
+            case "(":
+                arg = arg.replace("(", "");
+                break;
+            case ")":
+                arg = arg.replace(")", "");
+                break;
+            case "_":
+                arg = arg.replace("_", "");
+                break;
+            case "-":
+                arg = arg.replace("-", "");
+                break;
+            case "+":
+                arg = arg.replace("+", "");
+                break;
+            case "=":
+                arg = arg.replace("=", "");
+                break;
+            case "|":
+                arg = arg.replace("|", "");
+                break;
+            case "}":
+                arg = arg.replace("}", "");
+                break;
+            case "{":
+                arg = arg.replace("{", "");
+                break;
+            case "]":
+                arg = arg.replace("]", "");
+                break;
+            case "[":
+                arg = arg.replace("[", "");
+                break;
+            case "'":
+                arg = arg.replace("'", "");
+                break;
+            case ":":
+                arg = arg.replace(":", "");
+                break;
+            case ";":
+                arg = arg.replace(";", "");
+                break;
+            case "/":
+                arg = arg.replace("/", "");
+                break;
+            case "?":
+                arg = arg.replace("?", "");
+                break;
+            case ">":
+                arg = arg.replace(">", "");
+                break;
+            case "<":
+                arg = arg.replace("<", "");
+                break;
+            case ".":
+                arg = arg.replace(".", "");
+                break;
+            case ",":
+                arg = arg.replace(",", "");
+                break;
         }
-
-        if (i === "~"){
-            arg = arg.replace("~", "")
-        }
-
-        if (i === "!"){
-            arg = arg.replace("!", "")
-        }
-
-        if (i === "@"){
-            arg = arg.replace("@", "")
-        }
-
-        if (i === "#"){
-            arg = arg.replace("#", "")
-        }
-
-        if (i === "$"){
-            arg = arg.replace("$", "")
-        }
-
-        if (i === "%"){
-            arg = arg.replace("%", "")
-        }
-
-        if (i === "^"){
-            arg = arg.replace("^", "")
-        }
-
-        if (i === "&"){
-            arg = arg.replace("&", "")
-        }
-
-        if (i === "*"){
-            arg = arg.replace("*", "")
-        }
-
-        if (i === "("){
-            arg = arg.replace("(", "")
-        }
-
-        if (i === ")"){
-            arg = arg.replace(")", "")
-        }
-
-        if (i === "_"){
-            arg = arg.replace("_", "")
-        }
-
-        if (i === "-"){
-            arg = arg.replace("-", "")
-        }
-
-        if (i === "+"){
-            arg = arg.replace("+", "")
-        }
-
-        if (i === "="){
-            arg = arg.replace("=", "")
-        }
-
-        if (i === "|"){
-            arg = arg.replace("|", "")
-        }
-
-        if (i === "}"){
-            arg = arg.replace("}", "")
-        }
-
-        if (i === "{"){
-            arg = arg.replace("{", "")
-        }
-
-        if (i === "]"){
-            arg = arg.replace("]", "")
-        }
-
-        if (i === "["){
-            arg = arg.replace("[", "")
-        }
-
-        if (i === "'"){
-            arg = arg.replace("'", "")
-        }
-
-        if (i === ":"){
-            arg = arg.replace(":", "")
-        }
-
-        if (i === ";"){
-            arg = arg.replace(";", "")
-        }
-
-        if (i === "/"){
-            arg = arg.replace("/", "")
-        }
-
-        if (i === "?"){
-            arg = arg.replace("?", "")
-        }
-
-        if (i === ">"){
-            arg = arg.replace(">", "")
-        }
-
-        if (i === "<"){
-            arg = arg.replace("<", "")
-        }
-
-        if (i === "."){
-            arg = arg.replace(".", "")
-        }
-
-        if (i === ","){
-            arg = arg.replace(",", "")
-        }   
     }
 
     return arg
@@ -397,27 +394,33 @@ reset = () => {
 // Log search match to console.
 search_log = (arg) => {
     for (var i of hiragana) {
-        if (arg === i.translation) {
+        temp_translation = trimAll(i.translation.toLowerCase())
+        temp_kana = trimAll(i.kana.toLowerCase())
+
+        if (arg === temp_translation) {
             console.log("Hiragana: { Translation:", i.translation, ", Kana:", i.kana, "}")
         }   
-        else if (arg === i.kana) {
+        else if (arg === temp_kana) {
             console.log("Hiragana: { Translation:", i.translation, ", Kana:", i.kana, "}")
         }
     }
 
     for (var i of katakana) {
-        if (arg === i.translation) {
+        temp_translation = trimAll(i.translation.toLowerCase())
+        temp_kana = trimAll(i.kana.toLowerCase())
+
+        if (arg === temp_translation) {
             console.log("Katakana: { Translation:", i.translation, ", Kana:", i.kana, "}")
         }   
-        else if (arg === i.kana) {
+        else if (arg === temp_kana) {
             console.log("Katakana: { Translation:", i.translation, ", Kana:", i.kana, "}")
         }
     }
 
     for (var i of kanji) {
-        temp_translation = trimAll(i.translation)
-        temp_kana = trimAll(i.kana)
-        temp_pronunciation = trimAll(i.pronunciation)
+        temp_translation = trimAll(i.translation.toLowerCase())
+        temp_kana = trimAll(i.kana.toLowerCase())
+        temp_pronunciation = trimAll(i.pronunciation.toLowerCase())
 
         if (arg === temp_translation) {
             console.log("Kanji: { Translation:", i.translation, ", Kana:", i.kana, ", Pronunciation:", i.pronunciation, "}")
@@ -431,9 +434,9 @@ search_log = (arg) => {
     }
 
     for (var i of general) {
-        temp_translation = trimAll(i.translation)
-        temp_kana = trimAll(i.kana)
-        temp_pronunciation = trimAll(i.pronunciation)
+        temp_translation = trimAll(i.translation.toLowerCase())
+        temp_kana = trimAll(i.kana.toLowerCase())
+        temp_pronunciation = trimAll(i.pronunciation.toLowerCase())
 
         if (arg === temp_translation) {
             console.log("General: { Translation:", i.translation, ", Kana:", i.kana, ", Pronunciation:", i.pronunciation, "}")
