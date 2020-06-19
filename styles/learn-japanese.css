@@ -41,13 +41,13 @@ table {
     background-color: whitesmoke;
     border-color: black;
     border-style: solid;
-    border-radius: 15px;
+    border-radius: 2px;
     border-width: thick;
     margin: auto;
     width: 50%;
 }
 
-td, th {
+th {
     text-align: center;
     border: thin solid black;
     border-radius: 2px;
@@ -55,6 +55,16 @@ td, th {
     font-style: normal;
     font-weight: bold;
     font-size: 1.2rem;
+}
+
+td {
+    text-align: center;
+    border: thin solid black;
+    border-radius: 2px;
+    padding: 1rem;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
 }
 
 a {
@@ -160,7 +170,6 @@ a:hover {
 
     td, th {
         padding: 1.5%;
-        font-size: 1.1rem;
     }
 
     nav {
@@ -207,10 +216,10 @@ a:hover {
 @media only screen and (max-width: 414px) {
     table {
         width: 98%;
+        padding: 0%;
     }
 
     td, th {
-        padding: 1%;
-        font-size: 1rem;
+        padding: .5%;   
     }
 }
