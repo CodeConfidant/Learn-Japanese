@@ -51,7 +51,7 @@ th {
     text-align: center;
     border: thin solid black;
     border-radius: 2px;
-    padding: 1rem;
+    padding: 1%;
     font-style: normal;
     font-weight: normal;
     font-size: 1.2rem;
@@ -61,7 +61,7 @@ td {
     text-align: center;
     border: thin solid black;
     border-radius: 2px;
-    padding: 1rem;
+    padding: 1%;
     font-style: normal;
     font-weight: normal;
     font-size: 1rem;
@@ -168,10 +168,6 @@ a:hover {
         width: 100%;
     }
 
-    td, th {
-        padding: 1.5%;
-    }
-
     nav {
         position: relative;
     }
@@ -215,11 +211,10 @@ a:hover {
 
 @media only screen and (max-width: 414px) {
     table {
-        width: 98%;
         padding: 0%;
     }
 
     td, th {
-        padding: .5%;   
+        font-size: .9rem;
     }
 }
