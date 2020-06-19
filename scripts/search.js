@@ -386,11 +386,6 @@ trimAll = (arg) => {
     return arg
 };
 
-// Reset value of input.
-reset = () => {
-    document.getElementById("search-box").value = ""
-};
-
 // Log search match to console.
 search_log = (arg) => {
     for (var i of hiragana) {
@@ -450,8 +445,182 @@ search_log = (arg) => {
     }
 };
 
+// Output search match to empty table.
+search_out = (arg) => {
+    var table = document.getElementById("search-output");
+    
+    var headRow = table.insertRow(0);
+    var typeHead = headRow.insertCell(0);
+    var kanaHead = headRow.insertCell(1);
+    var translationHead = headRow.insertCell(2);
+    var pronunciationHead = headRow.insertCell(3);
+    typeHead.innerHTML = "Type";
+    kanaHead.innerHTML = "Kana";
+    translationHead.innerHTML = "Translation";
+    pronunciationHead.innerHTML = "Pronunciation";
+
+    for (var i of hiragana) {
+        temp_translation = trimAll(i.translation.toLowerCase())
+        temp_kana = trimAll(i.kana.toLowerCase())
+
+        if (arg === temp_translation) {
+            var valRow = table.insertRow(1);
+            var typeVal = valRow.insertCell(0);
+            var kanaVal = valRow.insertCell(1);
+            var translationVal = valRow.insertCell(2);
+            var pronunciationVal = valRow.insertCell(3);
+
+            typeVal.innerHTML = "Hiragana";
+            kanaVal.innerHTML = i.kana;
+            translationVal.innerHTML = i.translation;
+            pronunciationVal.innerHTML = "N/A"
+
+        }   
+        else if (arg === temp_kana) {
+            var valRow = table.insertRow(1);
+            var typeVal = valRow.insertCell(0);
+            var kanaVal = valRow.insertCell(1);
+            var translationVal = valRow.insertCell(2);
+            var pronunciationVal = valRow.insertCell(3);
+
+            typeVal.innerHTML = "Hiragana";
+            kanaVal.innerHTML = i.kana;
+            translationVal.innerHTML = i.translation;
+            pronunciationVal.innerHTML = "N/A"
+        }
+    }
+
+    for (var i of katakana) {
+        temp_translation = trimAll(i.translation.toLowerCase())
+        temp_kana = trimAll(i.kana.toLowerCase())
+
+        if (arg === temp_translation) {
+            var valRow = table.insertRow(1);
+            var typeVal = valRow.insertCell(0);
+            var kanaVal = valRow.insertCell(1);
+            var translationVal = valRow.insertCell(2);
+            var pronunciationVal = valRow.insertCell(3);
+
+            typeVal.innerHTML = "Katakana";
+            kanaVal.innerHTML = i.kana;
+            translationVal.innerHTML = i.translation;
+            pronunciationVal.innerHTML = "N/A"
+        }   
+        else if (arg === temp_kana) {
+            var valRow = table.insertRow(1);
+            var typeVal = valRow.insertCell(0);
+            var kanaVal = valRow.insertCell(1);
+            var translationVal = valRow.insertCell(2);
+            var pronunciationVal = valRow.insertCell(3);
+
+            typeVal.innerHTML = "Katakana";
+            kanaVal.innerHTML = i.kana;
+            translationVal.innerHTML = i.translation;
+            pronunciationVal.innerHTML = "N/A"
+        }
+    }
+
+    for (var i of kanji) {
+        temp_translation = trimAll(i.translation.toLowerCase())
+        temp_kana = trimAll(i.kana.toLowerCase())
+        temp_pronunciation = trimAll(i.pronunciation.toLowerCase())
+
+        if (arg === temp_translation) {
+            var valRow = table.insertRow(1);
+            var typeVal = valRow.insertCell(0);
+            var kanaVal = valRow.insertCell(1);
+            var translationVal = valRow.insertCell(2);
+            var pronunciationVal = valRow.insertCell(3);
+
+            typeVal.innerHTML = "Kanji";
+            kanaVal.innerHTML = i.kana;
+            translationVal.innerHTML = i.translation;
+            pronunciationVal.innerHTML = i.pronunciation;
+        }   
+        else if (arg === temp_kana) {
+            var valRow = table.insertRow(1);
+            var typeVal = valRow.insertCell(0);
+            var kanaVal = valRow.insertCell(1);
+            var translationVal = valRow.insertCell(2);
+            var pronunciationVal = valRow.insertCell(3);
+
+            typeVal.innerHTML = "Kanji";
+            kanaVal.innerHTML = i.kana;
+            translationVal.innerHTML = i.translation;
+            pronunciationVal.innerHTML = i.pronunciation;
+        }
+        else if (arg === temp_pronunciation) {
+            var valRow = table.insertRow(1);
+            var typeVal = valRow.insertCell(0);
+            var kanaVal = valRow.insertCell(1);
+            var translationVal = valRow.insertCell(2);
+            var pronunciationVal = valRow.insertCell(3);
+
+            typeVal.innerHTML = "Kanji";
+            kanaVal.innerHTML = i.kana;
+            translationVal.innerHTML = i.translation;
+            pronunciationVal.innerHTML = i.pronunciation;
+        }
+    }
+    
+    for (var i of general) {
+        temp_translation = trimAll(i.translation.toLowerCase())
+        temp_kana = trimAll(i.kana.toLowerCase())
+        temp_pronunciation = trimAll(i.pronunciation.toLowerCase())
+
+        if (arg === temp_translation) {
+            var valRow = table.insertRow(1);
+            var typeVal = valRow.insertCell(0);
+            var kanaVal = valRow.insertCell(1);
+            var translationVal = valRow.insertCell(2);
+            var pronunciationVal = valRow.insertCell(3);
+
+            typeVal.innerHTML = "General";
+            kanaVal.innerHTML = i.kana;
+            translationVal.innerHTML = i.translation;
+            pronunciationVal.innerHTML = i.pronunciation;
+        }   
+        else if (arg === temp_kana) {
+            var valRow = table.insertRow(1);
+            var typeVal = valRow.insertCell(0);
+            var kanaVal = valRow.insertCell(1);
+            var translationVal = valRow.insertCell(2);
+            var pronunciationVal = valRow.insertCell(3);
+
+            typeVal.innerHTML = "General";
+            kanaVal.innerHTML = i.kana;
+            translationVal.innerHTML = i.translation;
+            pronunciationVal.innerHTML = i.pronunciation;
+        }
+        else if (arg === temp_pronunciation) {
+            var valRow = table.insertRow(1);
+            var typeVal = valRow.insertCell(0);
+            var kanaVal = valRow.insertCell(1);
+            var translationVal = valRow.insertCell(2);
+            var pronunciationVal = valRow.insertCell(3);
+
+            typeVal.innerHTML = "General";
+            kanaVal.innerHTML = i.kana;
+            translationVal.innerHTML = i.translation;
+            pronunciationVal.innerHTML = i.pronunciation;
+        }
+    }
+};
+
+// Delete element interior HTML.
+clear_element = (elementID) => {
+    var element = document.getElementById(elementID); element.innerHTML = "";
+};
+
+// Reset value of input.
+reset = () => {
+    document.getElementById("search-box").value = "";
+};
+
 // Handle the search submission.
 search_handler = () => {
     var search_value = trimAll(document.getElementById("search-box").value.toLowerCase())
-    search_log(search_value) 
+    search_log(search_value)
+    clear_element("search-output")
+    search_out(search_value)
 };
