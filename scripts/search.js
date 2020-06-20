@@ -619,8 +619,10 @@ reset = () => {
 
 // Handle the search submission.
 search_handler = () => {
-    var search_value = trimAll(document.getElementById("search-box").value.toLowerCase())
-    search_log(search_value)
+    var search_value = trimAll(document.getElementById("search-box").value.toLowerCase());
+    document.getElementById("search-output").style.backgroundColor = "whitesmoke";
+    
     clear_element("search-output")
+    search_log(search_value)
     search_out(search_value)
 };
