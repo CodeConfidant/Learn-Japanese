@@ -1,226 +1,226 @@
 
-// Object containing Hiragana translations and kana.
+// Object containing Hiragana transliterations and kana.
 var hiragana = [
 
     // Vowels
-    {translation: "a", kana: "ぁ"},
-    {translation: "e", kana: "ぇ"},
-    {translation: "i", kana: "い"},
-    {translation: "o", kana: "お"},
-    {translation: "u", kana: "う"},
+    {transliteration: "a", kana: "ぁ"},
+    {transliteration: "e", kana: "ぇ"},
+    {transliteration: "i", kana: "い"},
+    {transliteration: "o", kana: "お"},
+    {transliteration: "u", kana: "う"},
 
     // D Consonant
-    {translation: "da", kana: "だ"},
-    {translation: "de", kana: "で"},
-    {translation: "do", kana: "ど"},
-    {translation: "du", kana: "づ"},
+    {transliteration: "da", kana: "だ"},
+    {transliteration: "de", kana: "で"},
+    {transliteration: "do", kana: "ど"},
+    {transliteration: "du", kana: "づ"},
     
     // G Consonant
-    {translation: "ga", kana: "が"},
-    {translation: "ge", kana: "げ"},
-    {translation: "gi", kana: "ぎ"},
-    {translation: "go", kana: "ご"},
-    {translation: "gu", kana: "ぐ"},
+    {transliteration: "ga", kana: "が"},
+    {transliteration: "ge", kana: "げ"},
+    {transliteration: "gi", kana: "ぎ"},
+    {transliteration: "go", kana: "ご"},
+    {transliteration: "gu", kana: "ぐ"},
     
     // H Consonant
-    {translation: "ha", kana: "は"},
-    {translation: "he", kana: "へ"},
-    {translation: "hi", kana: "ひ"},
-    {translation: "ho", kana: "ほ"},
-    {translation: "hu", kana: "ふ"},
+    {transliteration: "ha", kana: "は"},
+    {transliteration: "he", kana: "へ"},
+    {transliteration: "hi", kana: "ひ"},
+    {transliteration: "ho", kana: "ほ"},
+    {transliteration: "hu", kana: "ふ"},
     
     // K Consonant
-    {translation: "ka", kana: "か"},
-    {translation: "ke", kana: "け"},
-    {translation: "ki", kana: "き"},
-    {translation: "ko", kana: "こ"},
-    {translation: "ku", kana: "く"},
+    {transliteration: "ka", kana: "か"},
+    {transliteration: "ke", kana: "け"},
+    {transliteration: "ki", kana: "き"},
+    {transliteration: "ko", kana: "こ"},
+    {transliteration: "ku", kana: "く"},
     
     // M Consonant
-    {translation: "ma", kana: "ま"},
-    {translation: "me", kana: "め"},
-    {translation: "mi", kana: "み"},
-    {translation: "mo", kana: "も"},
-    {translation: "mu", kana: "む"},
+    {transliteration: "ma", kana: "ま"},
+    {transliteration: "me", kana: "め"},
+    {transliteration: "mi", kana: "み"},
+    {transliteration: "mo", kana: "も"},
+    {transliteration: "mu", kana: "む"},
     
     // N Consonant
-    {translation: "n", kana: "ん"},
-    {translation: "na", kana: "な"},
-    {translation: "ne", kana: "ね"},
-    {translation: "ni", kana: "に"},
-    {translation: "no", kana: "の"},
-    {translation: "nu", kana: "ぬ"},
+    {transliteration: "n", kana: "ん"},
+    {transliteration: "na", kana: "な"},
+    {transliteration: "ne", kana: "ね"},
+    {transliteration: "ni", kana: "に"},
+    {transliteration: "no", kana: "の"},
+    {transliteration: "nu", kana: "ぬ"},
     
     // P Consonant
-    {translation: "pa", kana: "ぱ"},
-    {translation: "pe", kana: "ぺ"},
-    {translation: "pi", kana: "ぴ"},
-    {translation: "po", kana: "ぽ"},
-    {translation: "pu", kana: "ぷ"},
+    {transliteration: "pa", kana: "ぱ"},
+    {transliteration: "pe", kana: "ぺ"},
+    {transliteration: "pi", kana: "ぴ"},
+    {transliteration: "po", kana: "ぽ"},
+    {transliteration: "pu", kana: "ぷ"},
 
     // R Consonant
-    {translation: "ra", kana: "ら"},
-    {translation: "re", kana: "れ"},
-    {translation: "ri", kana: "り"},
-    {translation: "ro", kana: "ろ"},
-    {translation: "ru", kana: "る"},
+    {transliteration: "ra", kana: "ら"},
+    {transliteration: "re", kana: "れ"},
+    {transliteration: "ri", kana: "り"},
+    {transliteration: "ro", kana: "ろ"},
+    {transliteration: "ru", kana: "る"},
     
     // S Consonant
-    {translation: "sa", kana: "さ"},
-    {translation: "se", kana: "せ"},
-    {translation: "si", kana: "し"},
-    {translation: "shi", kana: "し"},
-    {translation: "so", kana: "そ"},
-    {translation: "su", kana: "す"},
-    {translation: "shu", kana: "す"},
+    {transliteration: "sa", kana: "さ"},
+    {transliteration: "se", kana: "せ"},
+    {transliteration: "si", kana: "し"},
+    {transliteration: "shi", kana: "し"},
+    {transliteration: "so", kana: "そ"},
+    {transliteration: "su", kana: "す"},
+    {transliteration: "shu", kana: "す"},
 
     // T Consonant
-    {translation: "ta", kana: "た"},
-    {translation: "te", kana: "て"},
-    {translation: "ti", kana: "ち"},
-    {translation: "chi", kana: "ち"},
-    {translation: "to", kana: "と"},
-    {translation: "tu", kana: "っ"},
-    {translation: "tsu", kana: "っ"},
+    {transliteration: "ta", kana: "た"},
+    {transliteration: "te", kana: "て"},
+    {transliteration: "ti", kana: "ち"},
+    {transliteration: "chi", kana: "ち"},
+    {transliteration: "to", kana: "と"},
+    {transliteration: "tu", kana: "っ"},
+    {transliteration: "tsu", kana: "っ"},
 
     // W Consonant
-    {translation: "wa", kana: "わ"},
-    {translation: "wo", kana: "を"},
+    {transliteration: "wa", kana: "わ"},
+    {transliteration: "wo", kana: "を"},
 
     // Y Consonant
-    {translation: "ya", kana: "や"},
-    {translation: "yo", kana: "よ"},
-    {translation: "yu", kana: "ゆ"},
+    {transliteration: "ya", kana: "や"},
+    {transliteration: "yo", kana: "よ"},
+    {transliteration: "yu", kana: "ゆ"},
 
     // Z Consonant
-    {translation: "za", kana: "ざ"},
-    {translation: "ze", kana: "ぜ"},
-    {translation: "zi", kana: "じ"},
-    {translation: "zo", kana: "ぞ"},
-    {translation: "zu", kana: "ず"}
+    {transliteration: "za", kana: "ざ"},
+    {transliteration: "ze", kana: "ぜ"},
+    {transliteration: "zi", kana: "じ"},
+    {transliteration: "zo", kana: "ぞ"},
+    {transliteration: "zu", kana: "ず"}
 ];
 
-// Object containing Katakana translations and kana.
+// Object containing Katakana transliterations and kana.
 var katakana = [
 
     // Vowels
-    {translation: "a", kana: "ア"},
-    {translation: "e", kana: "エ"},
-    {translation: "i", kana: "イ"},
-    {translation: "o", kana: "オ"},
-    {translation: "u", kana: "ウ"},
+    {transliteration: "a", kana: "ア"},
+    {transliteration: "e", kana: "エ"},
+    {transliteration: "i", kana: "イ"},
+    {transliteration: "o", kana: "オ"},
+    {transliteration: "u", kana: "ウ"},
 
     // D Consonant
-    {translation: "da", kana: "ダ"},
-    {translation: "de", kana: "デ"},
-    {translation: "do", kana: "ド"},
-    {translation: "du", kana: "ヅ"},
+    {transliteration: "da", kana: "ダ"},
+    {transliteration: "de", kana: "デ"},
+    {transliteration: "do", kana: "ド"},
+    {transliteration: "du", kana: "ヅ"},
     
     // G Consonant
-    {translation: "ga", kana: "ガ"},
-    {translation: "ge", kana: "ゲ"},
-    {translation: "gi", kana: "ギ"},
-    {translation: "go", kana: "ゴ"},
-    {translation: "gu", kana: "グ"},
+    {transliteration: "ga", kana: "ガ"},
+    {transliteration: "ge", kana: "ゲ"},
+    {transliteration: "gi", kana: "ギ"},
+    {transliteration: "go", kana: "ゴ"},
+    {transliteration: "gu", kana: "グ"},
     
     // H Consonant
-    {translation: "ha", kana: "ハ"},
-    {translation: "he", kana: "ヘ"},
-    {translation: "hi", kana: "ヒ"},
-    {translation: "ho", kana: "ホ"},
-    {translation: "hu", kana: "フ"},
+    {transliteration: "ha", kana: "ハ"},
+    {transliteration: "he", kana: "ヘ"},
+    {transliteration: "hi", kana: "ヒ"},
+    {transliteration: "ho", kana: "ホ"},
+    {transliteration: "hu", kana: "フ"},
     
     // K Consonant
-    {translation: "ka", kana: "カ"},
-    {translation: "ke", kana: "ケ"},
-    {translation: "ki", kana: "キ"},
-    {translation: "ko", kana: "コ"},
-    {translation: "ku", kana: "ク"},
+    {transliteration: "ka", kana: "カ"},
+    {transliteration: "ke", kana: "ケ"},
+    {transliteration: "ki", kana: "キ"},
+    {transliteration: "ko", kana: "コ"},
+    {transliteration: "ku", kana: "ク"},
     
     // M Consonant
-    {translation: "ma", kana: "マ"},
-    {translation: "me", kana: "メ"},
-    {translation: "mi", kana: "ミ"},
-    {translation: "mo", kana: "モ"},
-    {translation: "mu", kana: "ム"},
+    {transliteration: "ma", kana: "マ"},
+    {transliteration: "me", kana: "メ"},
+    {transliteration: "mi", kana: "ミ"},
+    {transliteration: "mo", kana: "モ"},
+    {transliteration: "mu", kana: "ム"},
     
     // N Consonant
-    {translation: "n", kana: "ン"},
-    {translation: "na", kana: "ナ"},
-    {translation: "ne", kana: "ネ"},
-    {translation: "ni", kana: "ニ"},
-    {translation: "no", kana: "ノ"},
-    {translation: "nu", kana: "ヌ"},
+    {transliteration: "n", kana: "ン"},
+    {transliteration: "na", kana: "ナ"},
+    {transliteration: "ne", kana: "ネ"},
+    {transliteration: "ni", kana: "ニ"},
+    {transliteration: "no", kana: "ノ"},
+    {transliteration: "nu", kana: "ヌ"},
     
     // P Consonant
-    {translation: "pa", kana: "パ"},
-    {translation: "pe", kana: "ペ"},
-    {translation: "pi", kana: "ピ"},
-    {translation: "po", kana: "ポ"},
-    {translation: "pu", kana: "プ"},
+    {transliteration: "pa", kana: "パ"},
+    {transliteration: "pe", kana: "ペ"},
+    {transliteration: "pi", kana: "ピ"},
+    {transliteration: "po", kana: "ポ"},
+    {transliteration: "pu", kana: "プ"},
 
     // R Consonant
-    {translation: "ra", kana: "ラ"},
-    {translation: "re", kana: "レ"},
-    {translation: "ri", kana: "リ"},
-    {translation: "ro", kana: "ロ"},
-    {translation: "ru", kana: "ル"},
+    {transliteration: "ra", kana: "ラ"},
+    {transliteration: "re", kana: "レ"},
+    {transliteration: "ri", kana: "リ"},
+    {transliteration: "ro", kana: "ロ"},
+    {transliteration: "ru", kana: "ル"},
     
     // S Consonant
-    {translation: "sa", kana: "サ"},
-    {translation: "se", kana: "セ"},
-    {translation: "si", kana: "シ"},
-    {translation: "shi", kana: "シ"},
-    {translation: "so", kana: "ソ"},
-    {translation: "su", kana: "ス"},
-    {translation: "shu", kana: "ス"},
+    {transliteration: "sa", kana: "サ"},
+    {transliteration: "se", kana: "セ"},
+    {transliteration: "si", kana: "シ"},
+    {transliteration: "shi", kana: "シ"},
+    {transliteration: "so", kana: "ソ"},
+    {transliteration: "su", kana: "ス"},
+    {transliteration: "shu", kana: "ス"},
 
     // T Consonant
-    {translation: "ta", kana: "タ"},
-    {translation: "te", kana: "テ"},
-    {translation: "ti", kana: "チ"},
-    {translation: "chi", kana: "チ"},
-    {translation: "to", kana: "ト"},
-    {translation: "tu", kana: "ツ"},
-    {translation: "tsu", kana: "ツ"},
+    {transliteration: "ta", kana: "タ"},
+    {transliteration: "te", kana: "テ"},
+    {transliteration: "ti", kana: "チ"},
+    {transliteration: "chi", kana: "チ"},
+    {transliteration: "to", kana: "ト"},
+    {transliteration: "tu", kana: "ツ"},
+    {transliteration: "tsu", kana: "ツ"},
 
     // W Consonant
-    {translation: "wa", kana: "ワ"},
-    {translation: "we", kana: "ヱ"},
-    {translation: "wi", kana: "ヰ"},
-    {translation: "wo", kana: "ヲ"},
+    {transliteration: "wa", kana: "ワ"},
+    {transliteration: "we", kana: "ヱ"},
+    {transliteration: "wi", kana: "ヰ"},
+    {transliteration: "wo", kana: "ヲ"},
 
     // Y Consonant
-    {translation: "ya", kana: "ヤ"},
-    {translation: "yo", kana: "ヨ"},
-    {translation: "yu", kana: "ユ"},
+    {transliteration: "ya", kana: "ヤ"},
+    {transliteration: "yo", kana: "ヨ"},
+    {transliteration: "yu", kana: "ユ"},
 
     // Z Consonant
-    {translation: "za", kana: "ザ"},
-    {translation: "ze", kana: "ゼ"},
-    {translation: "zi", kana: "ジ"},
-    {translation: "zo", kana: "ゾ"},
-    {translation: "zu", kana: "ズ"}
+    {transliteration: "za", kana: "ザ"},
+    {transliteration: "ze", kana: "ゼ"},
+    {transliteration: "zi", kana: "ジ"},
+    {transliteration: "zo", kana: "ゾ"},
+    {transliteration: "zu", kana: "ズ"}
 ];
 
-// Object containing Kanji translations, kana, and pronunciations.
+// Object containing Kanji transliterations, kana, and translations.
 var kanji = [
-    {translation: "Ground", kana:"地", pronunciation:"Ji"},
-    {translation: "Water", kana:"水", pronunciation:"Mizu"},
-    {translation: "Wind", kana:"風", pronunciation:"Kaze"},
-    {translation: "Rain", kana:"雨", pronunciation:"Ame"},
-    {translation: "Fire", kana:"火", pronunciation:"Hi"},
-    {translation: "Thunder", kana:"雷", pronunciation:"Kaminari"},
-    {translation: "Lake", kana:"湖", pronunciation:"Mizumi"},
-    {translation: "Island", kana:"島", pronunciation:"Shima"},
-    {translation: "Mountain", kana:"山", pronunciation:"Yama"}
+    {translation: "Ground", kana:"地", transliteration:"Ji"},
+    {translation: "Water", kana:"水", transliteration:"Mizu"},
+    {translation: "Wind", kana:"風", transliteration:"Kaze"},
+    {translation: "Rain", kana:"雨", transliteration:"Ame"},
+    {translation: "Fire", kana:"火", transliteration:"Hi"},
+    {translation: "Thunder", kana:"雷", transliteration:"Kaminari"},
+    {translation: "Lake", kana:"湖", transliteration:"Mizumi"},
+    {translation: "Island", kana:"島", transliteration:"Shima"},
+    {translation: "Mountain", kana:"山", transliteration:"Yama"}
 ];
 
-// Object containing General translations, kana, and pronunciations.
+// Object containing General transliterations, kana, and translations.
 var general = [
-    {translation: "Hello", kana:"こにちわ", pronunciation:"Konichiwa"},
-    {translation: "Goodbye", kana:"さよむら", pronunciation:"Sayonara"},
-    {translation: "Thank-you", kana:"ありがと", pronunciation:"Arigato"}
+    {translation: "Hello", kana:"こにちわ", transliteration:"Konichiwa"},
+    {translation: "Goodbye", kana:"さよむら", transliteration:"Sayonara"},
+    {translation: "Thank-you", kana:"ありがと", transliteration:"Arigato"}
 ];
 
 // Remove number characters from argument string and return.
@@ -389,58 +389,58 @@ trimAll = (arg) => {
 // Log search match to console.
 search_log = (arg) => {
     for (var i of hiragana) {
-        temp_translation = trimAll(i.translation.toLowerCase())
+        temp_transliteration = trimAll(i.transliteration.toLowerCase())
         temp_kana = trimAll(i.kana.toLowerCase())
 
-        if (arg === temp_translation) {
-            console.log("Hiragana: { Translation:", i.translation, ", Kana:", i.kana, "}")
+        if (arg === temp_transliteration) {
+            console.log("Hiragana: { Transliteration:", i.transliteration, ", Kana:", i.kana, "}")
         }   
         else if (arg === temp_kana) {
-            console.log("Hiragana: { Translation:", i.translation, ", Kana:", i.kana, "}")
+            console.log("Hiragana: { Transliteration:", i.transliteration, ", Kana:", i.kana, "}")
         }
     }
 
     for (var i of katakana) {
-        temp_translation = trimAll(i.translation.toLowerCase())
+        temp_transliteration = trimAll(i.transliteration.toLowerCase())
         temp_kana = trimAll(i.kana.toLowerCase())
 
-        if (arg === temp_translation) {
-            console.log("Katakana: { Translation:", i.translation, ", Kana:", i.kana, "}")
+        if (arg === temp_transliteration) {
+            console.log("Katakana: { Transliteration:", i.transliteration, ", Kana:", i.kana, "}")
         }   
         else if (arg === temp_kana) {
-            console.log("Katakana: { Translation:", i.translation, ", Kana:", i.kana, "}")
+            console.log("Katakana: { Transliteration:", i.transliteration, ", Kana:", i.kana, "}")
         }
     }
 
     for (var i of kanji) {
-        temp_translation = trimAll(i.translation.toLowerCase())
+        temp_transliteration = trimAll(i.transliteration.toLowerCase())
         temp_kana = trimAll(i.kana.toLowerCase())
-        temp_pronunciation = trimAll(i.pronunciation.toLowerCase())
+        temp_translation = trimAll(i.translation.toLowerCase())
 
-        if (arg === temp_translation) {
-            console.log("Kanji: { Translation:", i.translation, ", Kana:", i.kana, ", Pronunciation:", i.pronunciation, "}")
+        if (arg === temp_transliteration) {
+            console.log("Kanji: { Transliteration:", i.transliteration, ", Kana:", i.kana, ", Translation:", i.translation, "}")
         }   
         else if (arg === temp_kana) {
-            console.log("Kanji: { Translation:", i.translation, ", Kana:", i.kana, ", Pronunciation:", i.pronunciation, "}")
+            console.log("Kanji: { Transliteration:", i.transliteration, ", Kana:", i.kana, ", Translation:", i.translation, "}")
         }
-        else if (arg === temp_pronunciation) {
-            console.log("Kanji: { Translation:", i.translation, ", Kana:", i.kana, ", Pronunciation:", i.pronunciation, "}")
+        else if (arg === temp_translation) {
+            console.log("Kanji: { Transliteration:", i.transliteration, ", Kana:", i.kana, ", Translation:", i.translation, "}")
         }
     }
 
     for (var i of general) {
-        temp_translation = trimAll(i.translation.toLowerCase())
+        temp_transliteration = trimAll(i.transliteration.toLowerCase())
         temp_kana = trimAll(i.kana.toLowerCase())
-        temp_pronunciation = trimAll(i.pronunciation.toLowerCase())
+        temp_translation = trimAll(i.translation.toLowerCase())
 
-        if (arg === temp_translation) {
-            console.log("General: { Translation:", i.translation, ", Kana:", i.kana, ", Pronunciation:", i.pronunciation, "}")
+        if (arg === temp_transliteration) {
+            console.log("General: { Transliteration:", i.transliteration, ", Kana:", i.kana, ", Translation:", i.translation, "}")
         }   
         else if (arg === temp_kana) {
-            console.log("General: { Translation:", i.translation, ", Kana:", i.kana, ", Pronunciation:", i.pronunciation, "}")
+            console.log("General: { Transliteration:", i.transliteration, ", Kana:", i.kana, ", Translation:", i.translation, "}")
         }
-        else if (arg === temp_pronunciation) {
-            console.log("General: { Translation:", i.translation, ", Kana:", i.kana, ", Pronunciation:", i.pronunciation, "}")
+        else if (arg === temp_translation) {
+            console.log("General: { Transliteration:", i.transliteration, ", Kana:", i.kana, ", Translation:", i.translation, "}")
         }
     }
 };
@@ -452,157 +452,157 @@ search_out = (arg) => {
     var headRow = table.insertRow(0);
     var typeHead = headRow.insertCell(0);
     var kanaHead = headRow.insertCell(1);
-    var translationHead = headRow.insertCell(2);
-    var pronunciationHead = headRow.insertCell(3);
+    var transliterationHead = headRow.insertCell(2);
+    var translationHead = headRow.insertCell(3);
     typeHead.innerHTML = "Type";
     kanaHead.innerHTML = "Kana";
+    transliterationHead.innerHTML = "Transliteration";
     translationHead.innerHTML = "Translation";
-    pronunciationHead.innerHTML = "Pronunciation";
 
     for (var i of hiragana) {
-        temp_translation = trimAll(i.translation.toLowerCase())
+        temp_transliteration = trimAll(i.transliteration.toLowerCase())
         temp_kana = trimAll(i.kana.toLowerCase())
 
-        if (arg === temp_translation) {
+        if (arg === temp_transliteration) {
             var valRow = table.insertRow(1);
             var typeVal = valRow.insertCell(0);
             var kanaVal = valRow.insertCell(1);
-            var translationVal = valRow.insertCell(2);
-            var pronunciationVal = valRow.insertCell(3);
+            var transliterationVal = valRow.insertCell(2);
+            var translationVal = valRow.insertCell(3);
 
             typeVal.innerHTML = "Hiragana";
             kanaVal.innerHTML = i.kana;
-            translationVal.innerHTML = i.translation;
-            pronunciationVal.innerHTML = "N/A"
+            transliterationVal.innerHTML = i.transliteration;
+            translationVal.innerHTML = "N/A"
 
         }   
         else if (arg === temp_kana) {
             var valRow = table.insertRow(1);
             var typeVal = valRow.insertCell(0);
             var kanaVal = valRow.insertCell(1);
-            var translationVal = valRow.insertCell(2);
-            var pronunciationVal = valRow.insertCell(3);
+            var transliterationVal = valRow.insertCell(2);
+            var translationVal = valRow.insertCell(3);
 
             typeVal.innerHTML = "Hiragana";
             kanaVal.innerHTML = i.kana;
-            translationVal.innerHTML = i.translation;
-            pronunciationVal.innerHTML = "N/A"
+            transliterationVal.innerHTML = i.transliteration;
+            translationVal.innerHTML = "N/A"
         }
     }
 
     for (var i of katakana) {
-        temp_translation = trimAll(i.translation.toLowerCase())
+        temp_transliteration = trimAll(i.transliteration.toLowerCase())
         temp_kana = trimAll(i.kana.toLowerCase())
 
-        if (arg === temp_translation) {
+        if (arg === temp_transliteration) {
             var valRow = table.insertRow(1);
             var typeVal = valRow.insertCell(0);
             var kanaVal = valRow.insertCell(1);
-            var translationVal = valRow.insertCell(2);
-            var pronunciationVal = valRow.insertCell(3);
+            var transliterationVal = valRow.insertCell(2);
+            var translationVal = valRow.insertCell(3);
 
             typeVal.innerHTML = "Katakana";
             kanaVal.innerHTML = i.kana;
-            translationVal.innerHTML = i.translation;
-            pronunciationVal.innerHTML = "N/A"
+            transliterationVal.innerHTML = i.transliteration;
+            translationVal.innerHTML = "N/A"
         }   
         else if (arg === temp_kana) {
             var valRow = table.insertRow(1);
             var typeVal = valRow.insertCell(0);
             var kanaVal = valRow.insertCell(1);
-            var translationVal = valRow.insertCell(2);
-            var pronunciationVal = valRow.insertCell(3);
+            var transliterationVal = valRow.insertCell(2);
+            var translationVal = valRow.insertCell(3);
 
             typeVal.innerHTML = "Katakana";
             kanaVal.innerHTML = i.kana;
-            translationVal.innerHTML = i.translation;
-            pronunciationVal.innerHTML = "N/A"
+            transliterationVal.innerHTML = i.transliteration;
+            translationVal.innerHTML = "N/A"
         }
     }
 
     for (var i of kanji) {
-        temp_translation = trimAll(i.translation.toLowerCase())
+        temp_transliteration = trimAll(i.transliteration.toLowerCase())
         temp_kana = trimAll(i.kana.toLowerCase())
-        temp_pronunciation = trimAll(i.pronunciation.toLowerCase())
+        temp_translation = trimAll(i.translation.toLowerCase())
 
-        if (arg === temp_translation) {
+        if (arg === temp_transliteration) {
             var valRow = table.insertRow(1);
             var typeVal = valRow.insertCell(0);
             var kanaVal = valRow.insertCell(1);
-            var translationVal = valRow.insertCell(2);
-            var pronunciationVal = valRow.insertCell(3);
+            var transliterationVal = valRow.insertCell(2);
+            var translationVal = valRow.insertCell(3);
 
             typeVal.innerHTML = "Kanji";
             kanaVal.innerHTML = i.kana;
+            transliterationVal.innerHTML = i.transliteration;
             translationVal.innerHTML = i.translation;
-            pronunciationVal.innerHTML = i.pronunciation;
         }   
         else if (arg === temp_kana) {
             var valRow = table.insertRow(1);
             var typeVal = valRow.insertCell(0);
             var kanaVal = valRow.insertCell(1);
-            var translationVal = valRow.insertCell(2);
-            var pronunciationVal = valRow.insertCell(3);
+            var transliterationVal = valRow.insertCell(2);
+            var translationVal = valRow.insertCell(3);
 
             typeVal.innerHTML = "Kanji";
             kanaVal.innerHTML = i.kana;
+            transliterationVal.innerHTML = i.transliteration;
             translationVal.innerHTML = i.translation;
-            pronunciationVal.innerHTML = i.pronunciation;
         }
-        else if (arg === temp_pronunciation) {
+        else if (arg === temp_translation) {
             var valRow = table.insertRow(1);
             var typeVal = valRow.insertCell(0);
             var kanaVal = valRow.insertCell(1);
-            var translationVal = valRow.insertCell(2);
-            var pronunciationVal = valRow.insertCell(3);
+            var transliterationVal = valRow.insertCell(2);
+            var translationVal = valRow.insertCell(3);
 
             typeVal.innerHTML = "Kanji";
             kanaVal.innerHTML = i.kana;
+            transliterationVal.innerHTML = i.transliteration;
             translationVal.innerHTML = i.translation;
-            pronunciationVal.innerHTML = i.pronunciation;
         }
     }
     
     for (var i of general) {
-        temp_translation = trimAll(i.translation.toLowerCase())
+        temp_transliteration = trimAll(i.transliteration.toLowerCase())
         temp_kana = trimAll(i.kana.toLowerCase())
-        temp_pronunciation = trimAll(i.pronunciation.toLowerCase())
+        temp_translation = trimAll(i.translation.toLowerCase())
 
-        if (arg === temp_translation) {
+        if (arg === temp_transliteration) {
             var valRow = table.insertRow(1);
             var typeVal = valRow.insertCell(0);
             var kanaVal = valRow.insertCell(1);
-            var translationVal = valRow.insertCell(2);
-            var pronunciationVal = valRow.insertCell(3);
+            var transliterationVal = valRow.insertCell(2);
+            var translationVal = valRow.insertCell(3);
 
             typeVal.innerHTML = "General";
             kanaVal.innerHTML = i.kana;
+            transliterationVal.innerHTML = i.transliteration;
             translationVal.innerHTML = i.translation;
-            pronunciationVal.innerHTML = i.pronunciation;
         }   
         else if (arg === temp_kana) {
             var valRow = table.insertRow(1);
             var typeVal = valRow.insertCell(0);
             var kanaVal = valRow.insertCell(1);
-            var translationVal = valRow.insertCell(2);
-            var pronunciationVal = valRow.insertCell(3);
+            var transliterationVal = valRow.insertCell(2);
+            var translationVal = valRow.insertCell(3);
 
             typeVal.innerHTML = "General";
             kanaVal.innerHTML = i.kana;
+            transliterationVal.innerHTML = i.transliteration;
             translationVal.innerHTML = i.translation;
-            pronunciationVal.innerHTML = i.pronunciation;
         }
-        else if (arg === temp_pronunciation) {
+        else if (arg === temp_translation) {
             var valRow = table.insertRow(1);
             var typeVal = valRow.insertCell(0);
             var kanaVal = valRow.insertCell(1);
-            var translationVal = valRow.insertCell(2);
-            var pronunciationVal = valRow.insertCell(3);
+            var transliterationVal = valRow.insertCell(2);
+            var translationVal = valRow.insertCell(3);
 
             typeVal.innerHTML = "General";
             kanaVal.innerHTML = i.kana;
+            transliterationVal.innerHTML = i.transliteration;
             translationVal.innerHTML = i.translation;
-            pronunciationVal.innerHTML = i.pronunciation;
         }
     }
 };
