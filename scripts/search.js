@@ -447,169 +447,175 @@ search_log = (arg) => {
 
 // Output search match to empty table.
 search_out = (arg) => {
-    var table = document.getElementById("search-output");
-    
-    var headRow = table.insertRow(0);
-    var typeHead = headRow.insertCell(0);
-    var kanaHead = headRow.insertCell(1);
-    var transliterationHead = headRow.insertCell(2);
-    var translationHead = headRow.insertCell(3);
-    typeHead.innerHTML = "Type";
-    kanaHead.innerHTML = "Kana";
-    transliterationHead.innerHTML = "Transliteration";
-    translationHead.innerHTML = "Translation";
-
-    for (var i of hiragana) {
-        temp_transliteration = trimAll(i.transliteration.toLowerCase())
-        temp_kana = trimAll(i.kana.toLowerCase())
-
-        if (arg === temp_transliteration) {
-            var valRow = table.insertRow(1);
-            var typeVal = valRow.insertCell(0);
-            var kanaVal = valRow.insertCell(1);
-            var transliterationVal = valRow.insertCell(2);
-            var translationVal = valRow.insertCell(3);
-
-            typeVal.innerHTML = "Hiragana";
-            kanaVal.innerHTML = i.kana;
-            transliterationVal.innerHTML = i.transliteration;
-            translationVal.innerHTML = "N/A"
-
-        }   
-        else if (arg === temp_kana) {
-            var valRow = table.insertRow(1);
-            var typeVal = valRow.insertCell(0);
-            var kanaVal = valRow.insertCell(1);
-            var transliterationVal = valRow.insertCell(2);
-            var translationVal = valRow.insertCell(3);
-
-            typeVal.innerHTML = "Hiragana";
-            kanaVal.innerHTML = i.kana;
-            transliterationVal.innerHTML = i.transliteration;
-            translationVal.innerHTML = "N/A"
-        }
+    if (arg.length === 0){
+        clear_table();
+        tableBGColor_black();
     }
+    else {
+        var table = document.getElementById("search-output");
+        var headRow = table.insertRow(0);
+        var typeHead = headRow.insertCell(0);
+        var kanaHead = headRow.insertCell(1);
+        var transliterationHead = headRow.insertCell(2);
+        var translationHead = headRow.insertCell(3);
 
-    for (var i of katakana) {
-        temp_transliteration = trimAll(i.transliteration.toLowerCase())
-        temp_kana = trimAll(i.kana.toLowerCase())
+        typeHead.innerHTML = "Type";
+        kanaHead.innerHTML = "Kana";
+        transliterationHead.innerHTML = "Transliteration";
+        translationHead.innerHTML = "Translation";
 
-        if (arg === temp_transliteration) {
-            var valRow = table.insertRow(1);
-            var typeVal = valRow.insertCell(0);
-            var kanaVal = valRow.insertCell(1);
-            var transliterationVal = valRow.insertCell(2);
-            var translationVal = valRow.insertCell(3);
+        for (var i of hiragana) {
+            var temp_transliteration = trimAll(i.transliteration.toLowerCase())
+            var temp_kana = trimAll(i.kana.toLowerCase())
 
-            typeVal.innerHTML = "Katakana";
-            kanaVal.innerHTML = i.kana;
-            transliterationVal.innerHTML = i.transliteration;
-            translationVal.innerHTML = "N/A"
-        }   
-        else if (arg === temp_kana) {
-            var valRow = table.insertRow(1);
-            var typeVal = valRow.insertCell(0);
-            var kanaVal = valRow.insertCell(1);
-            var transliterationVal = valRow.insertCell(2);
-            var translationVal = valRow.insertCell(3);
+            if (arg === temp_transliteration) {
+                var valRow = table.insertRow(1);
+                var typeVal = valRow.insertCell(0);
+                var kanaVal = valRow.insertCell(1);
+                var transliterationVal = valRow.insertCell(2);
+                var translationVal = valRow.insertCell(3);
 
-            typeVal.innerHTML = "Katakana";
-            kanaVal.innerHTML = i.kana;
-            transliterationVal.innerHTML = i.transliteration;
-            translationVal.innerHTML = "N/A"
+                typeVal.innerHTML = "Hiragana";
+                kanaVal.innerHTML = i.kana;
+                transliterationVal.innerHTML = i.transliteration;
+                translationVal.innerHTML = "N/A"
+
+            }   
+            else if (arg === temp_kana) {
+                var valRow = table.insertRow(1);
+                var typeVal = valRow.insertCell(0);
+                var kanaVal = valRow.insertCell(1);
+                var transliterationVal = valRow.insertCell(2);
+                var translationVal = valRow.insertCell(3);
+
+                typeVal.innerHTML = "Hiragana";
+                kanaVal.innerHTML = i.kana;
+                transliterationVal.innerHTML = i.transliteration;
+                translationVal.innerHTML = "N/A"
+            }
         }
-    }
 
-    for (var i of kanji) {
-        temp_transliteration = trimAll(i.transliteration.toLowerCase())
-        temp_kana = trimAll(i.kana.toLowerCase())
-        temp_translation = trimAll(i.translation.toLowerCase())
+        for (var i of katakana) {
+            var temp_transliteration = trimAll(i.transliteration.toLowerCase())
+            var temp_kana = trimAll(i.kana.toLowerCase())
 
-        if (arg === temp_transliteration) {
-            var valRow = table.insertRow(1);
-            var typeVal = valRow.insertCell(0);
-            var kanaVal = valRow.insertCell(1);
-            var transliterationVal = valRow.insertCell(2);
-            var translationVal = valRow.insertCell(3);
+            if (arg === temp_transliteration) {
+                var valRow = table.insertRow(1);
+                var typeVal = valRow.insertCell(0);
+                var kanaVal = valRow.insertCell(1);
+                var transliterationVal = valRow.insertCell(2);
+                var translationVal = valRow.insertCell(3);
 
-            typeVal.innerHTML = "Kanji";
-            kanaVal.innerHTML = i.kana;
-            transliterationVal.innerHTML = i.transliteration;
-            translationVal.innerHTML = i.translation;
-        }   
-        else if (arg === temp_kana) {
-            var valRow = table.insertRow(1);
-            var typeVal = valRow.insertCell(0);
-            var kanaVal = valRow.insertCell(1);
-            var transliterationVal = valRow.insertCell(2);
-            var translationVal = valRow.insertCell(3);
+                typeVal.innerHTML = "Katakana";
+                kanaVal.innerHTML = i.kana;
+                transliterationVal.innerHTML = i.transliteration;
+                translationVal.innerHTML = "N/A"
+            }   
+            else if (arg === temp_kana) {
+                var valRow = table.insertRow(1);
+                var typeVal = valRow.insertCell(0);
+                var kanaVal = valRow.insertCell(1);
+                var transliterationVal = valRow.insertCell(2);
+                var translationVal = valRow.insertCell(3);
 
-            typeVal.innerHTML = "Kanji";
-            kanaVal.innerHTML = i.kana;
-            transliterationVal.innerHTML = i.transliteration;
-            translationVal.innerHTML = i.translation;
+                typeVal.innerHTML = "Katakana";
+                kanaVal.innerHTML = i.kana;
+                transliterationVal.innerHTML = i.transliteration;
+                translationVal.innerHTML = "N/A"
+            }
         }
-        else if (arg === temp_translation) {
-            var valRow = table.insertRow(1);
-            var typeVal = valRow.insertCell(0);
-            var kanaVal = valRow.insertCell(1);
-            var transliterationVal = valRow.insertCell(2);
-            var translationVal = valRow.insertCell(3);
 
-            typeVal.innerHTML = "Kanji";
-            kanaVal.innerHTML = i.kana;
-            transliterationVal.innerHTML = i.transliteration;
-            translationVal.innerHTML = i.translation;
+        for (var i of kanji) {
+            var temp_transliteration = trimAll(i.transliteration.toLowerCase())
+            var temp_kana = trimAll(i.kana.toLowerCase())
+            var temp_translation = trimAll(i.translation.toLowerCase())
+
+            if (arg === temp_transliteration) {
+                var valRow = table.insertRow(1);
+                var typeVal = valRow.insertCell(0);
+                var kanaVal = valRow.insertCell(1);
+                var transliterationVal = valRow.insertCell(2);
+                var translationVal = valRow.insertCell(3);
+
+                typeVal.innerHTML = "Kanji";
+                kanaVal.innerHTML = i.kana;
+                transliterationVal.innerHTML = i.transliteration;
+                translationVal.innerHTML = i.translation;
+            }   
+            else if (arg === temp_kana) {
+                var valRow = table.insertRow(1);
+                var typeVal = valRow.insertCell(0);
+                var kanaVal = valRow.insertCell(1);
+                var transliterationVal = valRow.insertCell(2);
+                var translationVal = valRow.insertCell(3);
+
+                typeVal.innerHTML = "Kanji";
+                kanaVal.innerHTML = i.kana;
+                transliterationVal.innerHTML = i.transliteration;
+                translationVal.innerHTML = i.translation;
+            }
+            else if (arg === temp_translation) {
+                var valRow = table.insertRow(1);
+                var typeVal = valRow.insertCell(0);
+                var kanaVal = valRow.insertCell(1);
+                var transliterationVal = valRow.insertCell(2);
+                var translationVal = valRow.insertCell(3);
+
+                typeVal.innerHTML = "Kanji";
+                kanaVal.innerHTML = i.kana;
+                transliterationVal.innerHTML = i.transliteration;
+                translationVal.innerHTML = i.translation;
+            }
         }
-    }
-    
-    for (var i of general) {
-        temp_transliteration = trimAll(i.transliteration.toLowerCase())
-        temp_kana = trimAll(i.kana.toLowerCase())
-        temp_translation = trimAll(i.translation.toLowerCase())
+        
+        for (var i of general) {
+            var temp_transliteration = trimAll(i.transliteration.toLowerCase())
+            var temp_kana = trimAll(i.kana.toLowerCase())
+            var temp_translation = trimAll(i.translation.toLowerCase())
 
-        if (arg === temp_transliteration) {
-            var valRow = table.insertRow(1);
-            var typeVal = valRow.insertCell(0);
-            var kanaVal = valRow.insertCell(1);
-            var transliterationVal = valRow.insertCell(2);
-            var translationVal = valRow.insertCell(3);
+            if (arg === temp_transliteration) {
+                var valRow = table.insertRow(1);
+                var typeVal = valRow.insertCell(0);
+                var kanaVal = valRow.insertCell(1);
+                var transliterationVal = valRow.insertCell(2);
+                var translationVal = valRow.insertCell(3);
 
-            typeVal.innerHTML = "General";
-            kanaVal.innerHTML = i.kana;
-            transliterationVal.innerHTML = i.transliteration;
-            translationVal.innerHTML = i.translation;
-        }   
-        else if (arg === temp_kana) {
-            var valRow = table.insertRow(1);
-            var typeVal = valRow.insertCell(0);
-            var kanaVal = valRow.insertCell(1);
-            var transliterationVal = valRow.insertCell(2);
-            var translationVal = valRow.insertCell(3);
+                typeVal.innerHTML = "General";
+                kanaVal.innerHTML = i.kana;
+                transliterationVal.innerHTML = i.transliteration;
+                translationVal.innerHTML = i.translation;
+            }   
+            else if (arg === temp_kana) {
+                var valRow = table.insertRow(1);
+                var typeVal = valRow.insertCell(0);
+                var kanaVal = valRow.insertCell(1);
+                var transliterationVal = valRow.insertCell(2);
+                var translationVal = valRow.insertCell(3);
 
-            typeVal.innerHTML = "General";
-            kanaVal.innerHTML = i.kana;
-            transliterationVal.innerHTML = i.transliteration;
-            translationVal.innerHTML = i.translation;
-        }
-        else if (arg === temp_translation) {
-            var valRow = table.insertRow(1);
-            var typeVal = valRow.insertCell(0);
-            var kanaVal = valRow.insertCell(1);
-            var transliterationVal = valRow.insertCell(2);
-            var translationVal = valRow.insertCell(3);
+                typeVal.innerHTML = "General";
+                kanaVal.innerHTML = i.kana;
+                transliterationVal.innerHTML = i.transliteration;
+                translationVal.innerHTML = i.translation;
+            }
+            else if (arg === temp_translation) {
+                var valRow = table.insertRow(1);
+                var typeVal = valRow.insertCell(0);
+                var kanaVal = valRow.insertCell(1);
+                var transliterationVal = valRow.insertCell(2);
+                var translationVal = valRow.insertCell(3);
 
-            typeVal.innerHTML = "General";
-            kanaVal.innerHTML = i.kana;
-            transliterationVal.innerHTML = i.transliteration;
-            translationVal.innerHTML = i.translation;
+                typeVal.innerHTML = "General";
+                kanaVal.innerHTML = i.kana;
+                transliterationVal.innerHTML = i.transliteration;
+                translationVal.innerHTML = i.translation;
+            }
         }
     }
 };
 
-// Delete element interior HTML.
-clear_element = (elementID) => {
-    var element = document.getElementById(elementID); element.innerHTML = "";
+// Delete table interior HTML.
+clear_table = () => {
+    var table = document.getElementById("search-output"); table.innerHTML = "";
 };
 
 // Reset value of input.
@@ -617,12 +623,21 @@ reset = () => {
     document.getElementById("search-box").value = "";
 };
 
+// Change table background color to black.
+tableBGColor_black = () => {
+    document.getElementById("search-output").style.backgroundColor = "black";
+};
+
+// Change table background color to whitesmoke.
+tableBGColor_smoke = () => {
+    document.getElementById("search-output").style.backgroundColor = "whitesmoke";
+};
+
 // Handle the search submission.
 search_handler = () => {
     var search_value = trimAll(document.getElementById("search-box").value.toLowerCase());
-    document.getElementById("search-output").style.backgroundColor = "whitesmoke";
-    
-    clear_element("search-output")
-    search_log(search_value)
-    search_out(search_value)
+    tableBGColor_smoke(); 
+    clear_table();
+    search_out(search_value);
+    search_log(search_value);
 };
