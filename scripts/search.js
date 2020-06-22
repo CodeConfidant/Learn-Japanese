@@ -389,8 +389,8 @@ trimAll = (arg) => {
 // Log search match to console.
 search_log = (arg) => {
     for (var i of hiragana) {
-        temp_transliteration = trimAll(i.transliteration.toLowerCase())
-        temp_kana = trimAll(i.kana.toLowerCase())
+        var temp_transliteration = trimAll(i.transliteration.toLowerCase())
+        var temp_kana = trimAll(i.kana.toLowerCase())
 
         if (arg === temp_transliteration) {
             console.log("Hiragana: { Transliteration:", i.transliteration, ", Kana:", i.kana, "}")
@@ -401,8 +401,8 @@ search_log = (arg) => {
     }
 
     for (var i of katakana) {
-        temp_transliteration = trimAll(i.transliteration.toLowerCase())
-        temp_kana = trimAll(i.kana.toLowerCase())
+        var temp_transliteration = trimAll(i.transliteration.toLowerCase())
+        var temp_kana = trimAll(i.kana.toLowerCase())
 
         if (arg === temp_transliteration) {
             console.log("Katakana: { Transliteration:", i.transliteration, ", Kana:", i.kana, "}")
@@ -413,9 +413,9 @@ search_log = (arg) => {
     }
 
     for (var i of kanji) {
-        temp_transliteration = trimAll(i.transliteration.toLowerCase())
-        temp_kana = trimAll(i.kana.toLowerCase())
-        temp_translation = trimAll(i.translation.toLowerCase())
+        var temp_transliteration = trimAll(i.transliteration.toLowerCase())
+        var temp_kana = trimAll(i.kana.toLowerCase())
+        var temp_translation = trimAll(i.translation.toLowerCase())
 
         if (arg === temp_transliteration) {
             console.log("Kanji: { Transliteration:", i.transliteration, ", Kana:", i.kana, ", Translation:", i.translation, "}")
@@ -429,9 +429,9 @@ search_log = (arg) => {
     }
 
     for (var i of general) {
-        temp_transliteration = trimAll(i.transliteration.toLowerCase())
-        temp_kana = trimAll(i.kana.toLowerCase())
-        temp_translation = trimAll(i.translation.toLowerCase())
+        var temp_transliteration = trimAll(i.transliteration.toLowerCase())
+        var temp_kana = trimAll(i.kana.toLowerCase())
+        var temp_translation = trimAll(i.translation.toLowerCase())
 
         if (arg === temp_transliteration) {
             console.log("General: { Transliteration:", i.transliteration, ", Kana:", i.kana, ", Translation:", i.translation, "}")
