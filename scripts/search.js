@@ -86,6 +86,8 @@ var hiragana = [
 
     // W Consonant
     {transliteration: "Wa", kana: "わ"},
+    {transliteration: "We", kana: "ゑ"},
+    {transliteration: "Wi", kana: "ゐ"},
     {transliteration: "Wo", kana: "を"},
 
     // Y Consonant
