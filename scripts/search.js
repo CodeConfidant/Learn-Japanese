@@ -397,8 +397,8 @@ trimAll = (arg) => {
     return arg
 };
 
-// Log search match to console.
-search_log = (arg) => {
+// Check argument for matches in Hiragana object and log to console.
+searchlog_hiragana = (arg) => {
     for (var i of hiragana) {
         var temp_transliteration = trimAll(i.transliteration.toLowerCase())
         var temp_kana = trimAll(i.kana.toLowerCase())
@@ -410,7 +410,10 @@ search_log = (arg) => {
             console.log("Hiragana: { Transliteration:", i.transliteration, ", Kana:", i.kana, "}")
         }
     }
+};
 
+// Check argument for matches in Katakana object and log to console.
+searchlog_katakana = (arg) => {
     for (var i of katakana) {
         var temp_transliteration = trimAll(i.transliteration.toLowerCase())
         var temp_kana = trimAll(i.kana.toLowerCase())
@@ -422,7 +425,10 @@ search_log = (arg) => {
             console.log("Katakana: { Transliteration:", i.transliteration, ", Kana:", i.kana, "}")
         }
     }
+};
 
+// Check argument for matches in Kanji object and log to console.
+searchlog_kanji = (arg) => {
     for (var i of kanji) {
         var temp_transliteration = trimAll(i.transliteration.toLowerCase())
         var temp_kana = trimAll(i.kana.toLowerCase())
@@ -438,7 +444,10 @@ search_log = (arg) => {
             console.log("Kanji: { Transliteration:", i.transliteration, ", Kana:", i.kana, ", Translation:", i.translation, "}")
         }
     }
+};
 
+// Check argument for matches in General Hiragana object and log to console.
+searchlog_general_hiragana = (arg) => {
     for (var i of general_hiragana) {
         var temp_transliteration = trimAll(i.transliteration.toLowerCase())
         var temp_kana = trimAll(i.kana.toLowerCase())
@@ -454,7 +463,10 @@ search_log = (arg) => {
             console.log("General Hiragana: { Transliteration:", i.transliteration, ", Kana:", i.kana, ", Translation:", i.translation, "}")
         }
     }
+};
 
+// Check argument for matches in General Katakana object and log to console.
+searchlog_general_katakana = (arg) => {
     for (var i of general_katakana) {
         var temp_transliteration = trimAll(i.transliteration.toLowerCase())
         var temp_kana = trimAll(i.kana.toLowerCase())
@@ -470,6 +482,15 @@ search_log = (arg) => {
             console.log("General Katakana: { Transliteration:", i.transliteration, ", Kana:", i.kana, ", Translation:", i.translation, "}")
         }
     }
+};
+
+// Log search match to console.
+search_log = (arg) => {
+    searchlog_hiragana(arg);
+    searchlog_katakana(arg);
+    searchlog_kanji(arg);
+    searchlog_general_hiragana(arg);
+    searchlog_general_katakana(arg);
 };
 
 // Output search match to empty table.
