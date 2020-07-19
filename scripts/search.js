@@ -9,6 +9,13 @@ var hiragana = [
     {transliteration: "O", kana: "お"},
     {transliteration: "U", kana: "う"},
 
+    // B Consonant
+    {transliteration: "Ba", kana: "ば"},
+    {transliteration: "Be", kana: "べ"},
+    {transliteration: "Bi", kana: "び"},
+    {transliteration: "Bo", kana: "ぼ"},
+    {transliteration: "Bu", kana: "ぶ"},
+   
     // D Consonant
     {transliteration: "Da", kana: "だ"},
     {transliteration: "De", kana: "で"},
@@ -29,6 +36,9 @@ var hiragana = [
     {transliteration: "Hi", kana: "ひ"},
     {transliteration: "Ho", kana: "ほ"},
     {transliteration: "Hu", kana: "ふ"},
+
+    // J Consonant
+    {transliteration: "Ji", kana: "じ"},
     
     // K Consonant
     {transliteration: "Ka", kana: "か"},
@@ -113,6 +123,13 @@ var katakana = [
     {transliteration: "O", kana: "オ"},
     {transliteration: "U", kana: "ウ"},
 
+    // B Consonant
+    {transliteration: "Ba", kana: "バ"},
+    {transliteration: "Be", kana: "ベ"},
+    {transliteration: "Bi", kana: "ビ"},
+    {transliteration: "Bo", kana: "ボ"},
+    {transliteration: "Bu", kana: "ブ"},
+
     // D Consonant
     {transliteration: "Da", kana: "ダ"},
     {transliteration: "De", kana: "デ"},
@@ -133,6 +150,9 @@ var katakana = [
     {transliteration: "Hi", kana: "ヒ"},
     {transliteration: "Ho", kana: "ホ"},
     {transliteration: "Hu", kana: "フ"},
+
+    // J Consonant
+    {transliteration: "Ji", kana: "ジ"},
     
     // K Consonant
     {transliteration: "Ka", kana: "カ"},
