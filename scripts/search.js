@@ -230,6 +230,17 @@ var katakana = [
 // Object containing Kanji transliterations, kana, and translations.
 var kanji = [
 
+    // Nouns
+    {translation: "Japan", kana:"日本", transliteration:"Nihon"},
+    {translation: "Japan", kana:"日本", transliteration:"Nippon"},
+
+    // Verbs
+    {translation: "Learn", kana:"学ぶ", transliteration:"Manabu"},
+
+    // Adjectives
+    {translation: "Japanese", kana:"日本語", transliteration:"Nihon-Koku"},
+    {translation: "Japanese", kana:"日本語", transliteration:"Nippon-Koku"},
+
     // Weather/Elements
     {translation: "Ground", kana:"地", transliteration:"Ji"},
     {translation: "Water", kana:"水", transliteration:"Mizu"},
@@ -261,14 +272,16 @@ var kanji = [
 var general_hiragana = [
     {translation: "Hello", kana:"こにちわ", transliteration:"Konichiwa"},
     {translation: "Goodbye", kana:"さよむら", transliteration:"Sayonara"},
-    {translation: "Thanks", kana:"ありがと", transliteration:"Arigato"}
+    {translation: "Thanks", kana:"ありがと", transliteration:"Arigato"},
+    {translation: "Thank-You", kana:"ありがと", transliteration:"Arigato"},
 ];
 
 // Object containing General Katakana transliterations, kana, and translations.
 var general_katakana = [
     {translation: "Hello", kana:"コニチワ", transliteration:"Konichiwa"},
     {translation: "Goodbye", kana:"サヨナラ", transliteration:"Sayonara"},
-    {translation: "Thanks", kana:"アリガト", transliteration:"Arigato"}
+    {translation: "Thanks", kana:"アリガト", transliteration:"Arigato"},
+    {translation: "Thank-You", kana:"アリガト", transliteration:"Arigato"},
 ];
 
 // Remove number characters from argument string and return.
