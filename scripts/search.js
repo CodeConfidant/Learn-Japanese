@@ -270,18 +270,96 @@ var kanji = [
 
 // Object containing General Hiragana transliterations, kana, and translations.
 var general_hiragana = [
+
+    // Listed
     {translation: "Hello", kana:"こにちわ", transliteration:"Konichiwa"},
     {translation: "Goodbye", kana:"さよむら", transliteration:"Sayonara"},
     {translation: "Thanks", kana:"ありがと", transliteration:"Arigato"},
     {translation: "Thank-You", kana:"ありがと", transliteration:"Arigato"},
+    {translation: "Good-Evening", kana:"こんばんわ", transliteration:"Konbanwa"},
+
+    // Unlisted
+    {translation: "Out", kana:"でる", transliteration:"Deru"},
+    {translation: "Of", kana:"の", transliteration:"No"},
+    {translation: "The", kana:"の", transliteration:"No"},
+    {translation: "What", kana:"なに", transliteration:"Nani"},
+    {translation: "Very", kana:"ども", transliteration:"Domo"},
+    {translation: "Many", kana:"ども", transliteration:"Domo"},
+    {translation: "Rich", kana:"こく", transliteration:"Koku"},
+    {translation: "Hand", kana:"て", transliteration:"Te"},
+    {translation: "Empty Hand", kana:"からて", transliteration:"Karate"},
+    {translation: "Sword Path", kana:"けんど", transliteration:"Kendo"},
+    {translation: "Sword Way", kana:"けんど", transliteration:"Kendo"},
+    {translation: "Warrior", kana:"ぶし", transliteration:"Bushi"},
+    {translation: "Wood", kana:"ぼく", transliteration:"Boku"},
+    {translation: "Wooden", kana:"ぼく", transliteration:"Boku"},
+    {translation: "Wooden Sword", kana:"ぼけん", transliteration:"Boken"},
+    {translation: "Sword", kana:"けん", transliteration:"Ken"},
+    {translation: "Warrior Path", kana:"ぶしど", transliteration:"Bushido"},
+    {translation: "Warrior Way", kana:"ぶしど", transliteration:"Bushido"},
+    {translation: "War Path", kana:"ぶど", transliteration:"Budo"},
+    {translation: "War Way", kana:"ぶど", transliteration:"Budo"},
+    {translation: "War", kana:"ぶ", transliteration:"Bu"},
+    {translation: "Martial", kana:"ぶ", transliteration:"Bu"},
+    {translation: "Path", kana:"ど", transliteration:"Do"},
+    {translation: "Way", kana:"ど", transliteration:"Do"},
+    {translation: "Sword Master", kana:"けんせい", transliteration:"Kensei"},
+    {translation: "Sword Saint", kana:"けんせい", transliteration:"Kensei"},
+    
+    // Animals
+    {translation: "Rabbit", kana:"うさぎ", transliteration:"Usagi"},
+    {translation: "Bear", kana:"くま", transliteration:"Kuma"},
+    {translation: "Fox", kana:"きっね", transliteration:"Kitsune"},
+
+    // Food
+    {translation: "Honey", kana:"はちみっ", transliteration:"Hachimitsu"},
 ];
 
 // Object containing General Katakana transliterations, kana, and translations.
 var general_katakana = [
+
+    // Listed
     {translation: "Hello", kana:"コニチワ", transliteration:"Konichiwa"},
     {translation: "Goodbye", kana:"サヨナラ", transliteration:"Sayonara"},
     {translation: "Thanks", kana:"アリガト", transliteration:"Arigato"},
     {translation: "Thank-You", kana:"アリガト", transliteration:"Arigato"},
+    {translation: "Good-Evening", kana:"コンバンワ", transliteration:"Konbanwa"},
+
+    // Unlisted
+    {translation: "Out", kana:"デル", transliteration:"Deru"},
+    {translation: "Of", kana:"ノ", transliteration:"No"},
+    {translation: "The", kana:"ノ", transliteration:"No"},
+    {translation: "What", kana:"ナニ", transliteration:"Nani"},
+    {translation: "Very", kana:"ドモ", transliteration:"Domo"},
+    {translation: "Many", kana:"ドモ", transliteration:"Domo"},
+    {translation: "Rich", kana:"コク", transliteration:"Koku"},
+    {translation: "Hand", kana:"テ", transliteration:"Te"},
+    {translation: "Empty Hand", kana:"カラテ", transliteration:"Karate"},
+    {translation: "Sword Path", kana:"ケンド", transliteration:"Kendo"},
+    {translation: "Sword Way", kana:"ケンド", transliteration:"Kendo"},
+    {translation: "Warrior", kana:"ブシ", transliteration:"Bushi"},
+    {translation: "Wood", kana:"ボク", transliteration:"Boku"},
+    {translation: "Wooden", kana:"ボク", transliteration:"Boku"},
+    {translation: "Wooden Sword", kana:"ボケン", transliteration:"Boken"},
+    {translation: "Sword", kana:"ケン", transliteration:"Ken"},
+    {translation: "Warrior Path", kana:"ブシド", transliteration:"Bushido"},
+    {translation: "Warrior Way", kana:"ブシド", transliteration:"Bushido"},
+    {translation: "War Path", kana:"ブド", transliteration:"Budo"},
+    {translation: "War Way", kana:"ブド", transliteration:"Budo"},
+    {translation: "War", kana:"ブ", transliteration:"Bu"},
+    {translation: "Martial", kana:"ブ", transliteration:"Bu"},
+    {translation: "Path", kana:"ド", transliteration:"Do"},
+    {translation: "Way", kana:"ド", transliteration:"Do"},
+    {translation: "Sword Master", kana:"ケンセイ", transliteration:"Kensei"},
+    {translation: "Sword Saint", kana:"ケンセイ", transliteration:"Kensei"},
+    
+    // Animals
+    {translation: "Rabbit", kana:"ウサギ", transliteration:"Usagi"},
+    {translation: "Bear", kana:"クマ", transliteration:"Kuma"},
+    {translation: "Fox", kana:"キツネ", transliteration:"Kitsune"},
+
+    // Food
+    {translation: "Honey", kana:"ハチミツ", transliteration:"Hachimitsu"},
 ];
 
 // Remove number characters from argument string and return.
