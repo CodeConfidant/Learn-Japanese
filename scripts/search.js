@@ -471,307 +471,216 @@ trimAll = (arg) => {
 };
 
 // Check argument for matches in Hiragana object and log to console.
-searchlog_hiragana = (arg) => {
+searchlog_hiragana = (search_value) => {
     for (var i of hiragana) {
         var temp_transliteration = trimAll(i.transliteration.toLowerCase())
         var temp_kana = trimAll(i.kana.toLowerCase())
 
-        if (arg === temp_transliteration) {
+        if (search_value === temp_transliteration) {
             console.log("Hiragana: { Transliteration:", i.transliteration, ", Kana:", i.kana, "}")
         }   
-        else if (arg === temp_kana) {
+        else if (search_value === temp_kana) {
             console.log("Hiragana: { Transliteration:", i.transliteration, ", Kana:", i.kana, "}")
         }
     }
 };
 
 // Check argument for matches in Katakana object and log to console.
-searchlog_katakana = (arg) => {
+searchlog_katakana = (search_value) => {
     for (var i of katakana) {
         var temp_transliteration = trimAll(i.transliteration.toLowerCase())
         var temp_kana = trimAll(i.kana.toLowerCase())
 
-        if (arg === temp_transliteration) {
+        if (search_value === temp_transliteration) {
             console.log("Katakana: { Transliteration:", i.transliteration, ", Kana:", i.kana, "}")
         }   
-        else if (arg === temp_kana) {
+        else if (search_value === temp_kana) {
             console.log("Katakana: { Transliteration:", i.transliteration, ", Kana:", i.kana, "}")
         }
     }
 };
 
 // Check argument for matches in Kanji object and log to console.
-searchlog_kanji = (arg) => {
+searchlog_kanji = (search_value) => {
     for (var i of kanji) {
         var temp_transliteration = trimAll(i.transliteration.toLowerCase())
         var temp_kana = trimAll(i.kana.toLowerCase())
         var temp_translation = trimAll(i.translation.toLowerCase())
 
-        if (arg === temp_transliteration) {
+        if (search_value === temp_transliteration) {
             console.log("Kanji: { Transliteration:", i.transliteration, ", Kana:", i.kana, ", Translation:", i.translation, "}")
         }   
-        else if (arg === temp_kana) {
+        else if (search_value === temp_kana) {
             console.log("Kanji: { Transliteration:", i.transliteration, ", Kana:", i.kana, ", Translation:", i.translation, "}")
         }
-        else if (arg === temp_translation) {
+        else if (search_value === temp_translation) {
             console.log("Kanji: { Transliteration:", i.transliteration, ", Kana:", i.kana, ", Translation:", i.translation, "}")
         }
     }
 };
 
 // Check argument for matches in General Hiragana object and log to console.
-searchlog_general_hiragana = (arg) => {
+searchlog_general_hiragana = (search_value) => {
     for (var i of general_hiragana) {
         var temp_transliteration = trimAll(i.transliteration.toLowerCase())
         var temp_kana = trimAll(i.kana.toLowerCase())
         var temp_translation = trimAll(i.translation.toLowerCase())
 
-        if (arg === temp_transliteration) {
+        if (search_value === temp_transliteration) {
             console.log("General Hiragana: { Transliteration:", i.transliteration, ", Kana:", i.kana, ", Translation:", i.translation, "}")
         }   
-        else if (arg === temp_kana) {
+        else if (search_value === temp_kana) {
             console.log("General Hiragana: { Transliteration:", i.transliteration, ", Kana:", i.kana, ", Translation:", i.translation, "}")
         }
-        else if (arg === temp_translation) {
+        else if (search_value === temp_translation) {
             console.log("General Hiragana: { Transliteration:", i.transliteration, ", Kana:", i.kana, ", Translation:", i.translation, "}")
         }
     }
 };
 
 // Check argument for matches in General Katakana object and log to console.
-searchlog_general_katakana = (arg) => {
+searchlog_general_katakana = (search_value) => {
     for (var i of general_katakana) {
         var temp_transliteration = trimAll(i.transliteration.toLowerCase())
         var temp_kana = trimAll(i.kana.toLowerCase())
         var temp_translation = trimAll(i.translation.toLowerCase())
 
-        if (arg === temp_transliteration) {
+        if (search_value === temp_transliteration) {
             console.log("General Katakana: { Transliteration:", i.transliteration, ", Kana:", i.kana, ", Translation:", i.translation, "}")
         }   
-        else if (arg === temp_kana) {
+        else if (search_value === temp_kana) {
             console.log("General Katakana: { Transliteration:", i.transliteration, ", Kana:", i.kana, ", Translation:", i.translation, "}")
         }
-        else if (arg === temp_translation) {
+        else if (search_value === temp_translation) {
             console.log("General Katakana: { Transliteration:", i.transliteration, ", Kana:", i.kana, ", Translation:", i.translation, "}")
         }
     }
 };
 
 // Log search match to console.
-search_log = (arg) => {
-    searchlog_hiragana(arg);
-    searchlog_katakana(arg);
-    searchlog_kanji(arg);
-    searchlog_general_hiragana(arg);
-    searchlog_general_katakana(arg);
+search_log = (search_value) => {
+    if (search_value.length === 0){
+        console.clear();
+        console.log("The search query is empty!");
+    }
+    else {
+        console.clear();
+        searchlog_hiragana(search_value);
+        searchlog_katakana(search_value);
+        searchlog_kanji(search_value);
+        searchlog_general_hiragana(search_value);
+        searchlog_general_katakana(search_value);
+    }
+};
+
+// Insert header row into the table. Add header values.
+insert_headRow = (table_ID) => {
+    var table = document.getElementById(table_ID);
+    var headRow = table.insertRow(0);
+    var typeHead = headRow.insertCell(0);
+    var kanaHead = headRow.insertCell(1);
+    var transliterationHead = headRow.insertCell(2);
+    var translationHead = headRow.insertCell(3);
+
+    typeHead.innerHTML = "Type";
+    kanaHead.innerHTML = "Kana";
+    transliterationHead.innerHTML = "Transliteration";
+    translationHead.innerHTML = "Translation";
+};
+
+// Insert row of kana, transliteration, and translation values matching the into a new row within the table.
+insert_valRow = (table_ID, type, kana, transliteration, translation) => {
+    var table = document.getElementById(table_ID);
+    var valRow = table.insertRow(1);
+    var typeVal = valRow.insertCell(0);
+    var kanaVal = valRow.insertCell(1);
+    var transliterationVal = valRow.insertCell(2);
+    var translationVal = valRow.insertCell(3);
+
+    typeVal.innerHTML = type;
+    kanaVal.innerHTML = kana;
+    transliterationVal.innerHTML = transliteration;
+    translationVal.innerHTML = translation;
 };
 
 // Output search match to empty table.
-search_out = (arg) => {
-    if (arg.length === 0){
+search_out = (search_value, table_ID) => {
+    if (search_value.length === 0){
         clear_table();
         tableBGColor_black();
     }
     else {
-        var table = document.getElementById("search-output");
-        var headRow = table.insertRow(0);
-        var typeHead = headRow.insertCell(0);
-        var kanaHead = headRow.insertCell(1);
-        var transliterationHead = headRow.insertCell(2);
-        var translationHead = headRow.insertCell(3);
-
-        typeHead.innerHTML = "Type";
-        kanaHead.innerHTML = "Kana";
-        transliterationHead.innerHTML = "Transliteration";
-        translationHead.innerHTML = "Translation";
+        insert_headRow(table_ID);
 
         for (var i of hiragana) {
-            var temp_transliteration = trimAll(i.transliteration.toLowerCase())
-            var temp_kana = trimAll(i.kana.toLowerCase())
+            var temp_transliteration = trimAll(i.transliteration.toLowerCase());
+            var temp_kana = trimAll(i.kana.toLowerCase());
 
-            if (arg === temp_transliteration) {
-                var valRow = table.insertRow(1);
-                var typeVal = valRow.insertCell(0);
-                var kanaVal = valRow.insertCell(1);
-                var transliterationVal = valRow.insertCell(2);
-                var translationVal = valRow.insertCell(3);
-
-                typeVal.innerHTML = "Hiragana";
-                kanaVal.innerHTML = i.kana;
-                transliterationVal.innerHTML = i.transliteration;
-                translationVal.innerHTML = "N/A"
-
+            if (search_value === temp_transliteration) {
+                insert_valRow(table_ID, "Hiragana", i.kana, i.transliteration, "N/A");
             }   
-            else if (arg === temp_kana) {
-                var valRow = table.insertRow(1);
-                var typeVal = valRow.insertCell(0);
-                var kanaVal = valRow.insertCell(1);
-                var transliterationVal = valRow.insertCell(2);
-                var translationVal = valRow.insertCell(3);
-
-                typeVal.innerHTML = "Hiragana";
-                kanaVal.innerHTML = i.kana;
-                transliterationVal.innerHTML = i.transliteration;
-                translationVal.innerHTML = "N/A"
+            else if (search_value === temp_kana) {
+                insert_valRow(table_ID, "Hiragana", i.kana, i.transliteration, "N/A");
             }
         }
 
         for (var i of katakana) {
-            var temp_transliteration = trimAll(i.transliteration.toLowerCase())
-            var temp_kana = trimAll(i.kana.toLowerCase())
+            var temp_transliteration = trimAll(i.transliteration.toLowerCase());
+            var temp_kana = trimAll(i.kana.toLowerCase());
 
-            if (arg === temp_transliteration) {
-                var valRow = table.insertRow(1);
-                var typeVal = valRow.insertCell(0);
-                var kanaVal = valRow.insertCell(1);
-                var transliterationVal = valRow.insertCell(2);
-                var translationVal = valRow.insertCell(3);
-
-                typeVal.innerHTML = "Katakana";
-                kanaVal.innerHTML = i.kana;
-                transliterationVal.innerHTML = i.transliteration;
-                translationVal.innerHTML = "N/A"
+            if (search_value === temp_transliteration) {
+                insert_valRow(table_ID, "Katakana", i.kana, i.transliteration, "N/A");
             }   
-            else if (arg === temp_kana) {
-                var valRow = table.insertRow(1);
-                var typeVal = valRow.insertCell(0);
-                var kanaVal = valRow.insertCell(1);
-                var transliterationVal = valRow.insertCell(2);
-                var translationVal = valRow.insertCell(3);
-
-                typeVal.innerHTML = "Katakana";
-                kanaVal.innerHTML = i.kana;
-                transliterationVal.innerHTML = i.transliteration;
-                translationVal.innerHTML = "N/A"
+            else if (search_value === temp_kana) {
+                insert_valRow(table_ID, "Katakana", i.kana, i.transliteration, "N/A");
             }
         }
 
         for (var i of kanji) {
-            var temp_transliteration = trimAll(i.transliteration.toLowerCase())
-            var temp_kana = trimAll(i.kana.toLowerCase())
-            var temp_translation = trimAll(i.translation.toLowerCase())
+            var temp_transliteration = trimAll(i.transliteration.toLowerCase());
+            var temp_kana = trimAll(i.kana.toLowerCase());
+            var temp_translation = trimAll(i.translation.toLowerCase());
 
-            if (arg === temp_transliteration) {
-                var valRow = table.insertRow(1);
-                var typeVal = valRow.insertCell(0);
-                var kanaVal = valRow.insertCell(1);
-                var transliterationVal = valRow.insertCell(2);
-                var translationVal = valRow.insertCell(3);
-
-                typeVal.innerHTML = "Kanji";
-                kanaVal.innerHTML = i.kana;
-                transliterationVal.innerHTML = i.transliteration;
-                translationVal.innerHTML = i.translation;
+            if (search_value === temp_transliteration) {
+                insert_valRow(table_ID, "Kanji", i.kana, i.transliteration, i.translation);
             }   
-            else if (arg === temp_kana) {
-                var valRow = table.insertRow(1);
-                var typeVal = valRow.insertCell(0);
-                var kanaVal = valRow.insertCell(1);
-                var transliterationVal = valRow.insertCell(2);
-                var translationVal = valRow.insertCell(3);
-
-                typeVal.innerHTML = "Kanji";
-                kanaVal.innerHTML = i.kana;
-                transliterationVal.innerHTML = i.transliteration;
-                translationVal.innerHTML = i.translation;
+            else if (search_value === temp_kana) {
+                insert_valRow(table_ID, "Kanji", i.kana, i.transliteration, i.translation);
             }
-            else if (arg === temp_translation) {
-                var valRow = table.insertRow(1);
-                var typeVal = valRow.insertCell(0);
-                var kanaVal = valRow.insertCell(1);
-                var transliterationVal = valRow.insertCell(2);
-                var translationVal = valRow.insertCell(3);
-
-                typeVal.innerHTML = "Kanji";
-                kanaVal.innerHTML = i.kana;
-                transliterationVal.innerHTML = i.transliteration;
-                translationVal.innerHTML = i.translation;
+            else if (search_value === temp_translation) {
+                insert_valRow(table_ID, "Kanji", i.kana, i.transliteration, i.translation);
             }
         }
         
         for (var i of general_hiragana) {
-            var temp_transliteration = trimAll(i.transliteration.toLowerCase())
-            var temp_kana = trimAll(i.kana.toLowerCase())
-            var temp_translation = trimAll(i.translation.toLowerCase())
+            var temp_transliteration = trimAll(i.transliteration.toLowerCase());
+            var temp_kana = trimAll(i.kana.toLowerCase());
+            var temp_translation = trimAll(i.translation.toLowerCase());
 
-            if (arg === temp_transliteration) {
-                var valRow = table.insertRow(1);
-                var typeVal = valRow.insertCell(0);
-                var kanaVal = valRow.insertCell(1);
-                var transliterationVal = valRow.insertCell(2);
-                var translationVal = valRow.insertCell(3);
-
-                typeVal.innerHTML = "General <br/> Hiragana";
-                kanaVal.innerHTML = i.kana;
-                transliterationVal.innerHTML = i.transliteration;
-                translationVal.innerHTML = i.translation;
+            if (search_value === temp_transliteration) {
+                insert_valRow(table_ID, "General <br/> Hiragana", i.kana, i.transliteration, i.translation);
             }   
-            else if (arg === temp_kana) {
-                var valRow = table.insertRow(1);
-                var typeVal = valRow.insertCell(0);
-                var kanaVal = valRow.insertCell(1);
-                var transliterationVal = valRow.insertCell(2);
-                var translationVal = valRow.insertCell(3);
-
-                typeVal.innerHTML = "General <br/> Hiragana";
-                kanaVal.innerHTML = i.kana;
-                transliterationVal.innerHTML = i.transliteration;
-                translationVal.innerHTML = i.translation;
+            else if (search_value === temp_kana) {
+                insert_valRow(table_ID, "General <br/> Hiragana", i.kana, i.transliteration, i.translation);
             }
-            else if (arg === temp_translation) {
-                var valRow = table.insertRow(1);
-                var typeVal = valRow.insertCell(0);
-                var kanaVal = valRow.insertCell(1);
-                var transliterationVal = valRow.insertCell(2);
-                var translationVal = valRow.insertCell(3);
-
-                typeVal.innerHTML = "General <br/> Hiragana";
-                kanaVal.innerHTML = i.kana;
-                transliterationVal.innerHTML = i.transliteration;
-                translationVal.innerHTML = i.translation;
+            else if (search_value === temp_translation) {
+                insert_valRow(table_ID, "General <br/> Hiragana", i.kana, i.transliteration, i.translation);
             }
         }
 
         for (var i of general_katakana) {
-            var temp_transliteration = trimAll(i.transliteration.toLowerCase())
-            var temp_kana = trimAll(i.kana.toLowerCase())
-            var temp_translation = trimAll(i.translation.toLowerCase())
+            var temp_transliteration = trimAll(i.transliteration.toLowerCase());
+            var temp_kana = trimAll(i.kana.toLowerCase());
+            var temp_translation = trimAll(i.translation.toLowerCase());
 
-            if (arg === temp_transliteration) {
-                var valRow = table.insertRow(1);
-                var typeVal = valRow.insertCell(0);
-                var kanaVal = valRow.insertCell(1);
-                var transliterationVal = valRow.insertCell(2);
-                var translationVal = valRow.insertCell(3);
-
-                typeVal.innerHTML = "General <br/> Katakana";
-                kanaVal.innerHTML = i.kana;
-                transliterationVal.innerHTML = i.transliteration;
-                translationVal.innerHTML = i.translation;
+            if (search_value === temp_transliteration) {
+                insert_valRow(table_ID, "General <br/> Katakana", i.kana, i.transliteration, i.translation);
             }   
-            else if (arg === temp_kana) {
-                var valRow = table.insertRow(1);
-                var typeVal = valRow.insertCell(0);
-                var kanaVal = valRow.insertCell(1);
-                var transliterationVal = valRow.insertCell(2);
-                var translationVal = valRow.insertCell(3);
-
-                typeVal.innerHTML = "General <br/> Katakana";
-                kanaVal.innerHTML = i.kana;
-                transliterationVal.innerHTML = i.transliteration;
-                translationVal.innerHTML = i.translation;
+            else if (search_value === temp_kana) {
+                insert_valRow(table_ID, "General <br/> Katakana", i.kana, i.transliteration, i.translation);
             }
-            else if (arg === temp_translation) {
-                var valRow = table.insertRow(1);
-                var typeVal = valRow.insertCell(0);
-                var kanaVal = valRow.insertCell(1);
-                var transliterationVal = valRow.insertCell(2);
-                var translationVal = valRow.insertCell(3);
-
-                typeVal.innerHTML = "General <br/> Katakana";
-                kanaVal.innerHTML = i.kana;
-                transliterationVal.innerHTML = i.transliteration;
-                translationVal.innerHTML = i.translation;
+            else if (search_value === temp_translation) {
+                insert_valRow(table_ID, "General <br/> Katakana", i.kana, i.transliteration, i.translation);
             }
         }
     }
@@ -800,8 +709,7 @@ tableBGColor_smoke = () => {
 // Handle the search submission.
 search_handler = () => {
     var search_value = trimAll(document.getElementById("search-box").value.toLowerCase());
-    tableBGColor_smoke(); 
-    clear_table();
-    search_out(search_value);
+    tableBGColor_smoke(); clear_table();
+    search_out(search_value, "search-output"); 
     search_log(search_value);
 };
