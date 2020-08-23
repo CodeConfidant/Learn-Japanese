@@ -605,6 +605,8 @@ insert_valRow = (table_ID, type, kana, transliteration, translation) => {
 
 // Output search match to empty table.
 search_out = (search_value, table_ID) => {
+    var trimmed_value = trimAll(search_value.toLowerCase());
+
     if (search_value.length === 0){
         clear_table();
         tableBGColor_black();
@@ -616,10 +618,10 @@ search_out = (search_value, table_ID) => {
             var temp_transliteration = trimAll(i.transliteration.toLowerCase());
             var temp_kana = trimAll(i.kana.toLowerCase());
 
-            if (search_value === temp_transliteration) {
+            if (trimmed_value === temp_transliteration) {
                 insert_valRow(table_ID, "Hiragana", i.kana, i.transliteration, "N/A");
             }   
-            else if (search_value === temp_kana) {
+            else if (trimmed_value === temp_kana) {
                 insert_valRow(table_ID, "Hiragana", i.kana, i.transliteration, "N/A");
             }
         }
@@ -628,10 +630,10 @@ search_out = (search_value, table_ID) => {
             var temp_transliteration = trimAll(i.transliteration.toLowerCase());
             var temp_kana = trimAll(i.kana.toLowerCase());
 
-            if (search_value === temp_transliteration) {
+            if (trimmed_value === temp_transliteration) {
                 insert_valRow(table_ID, "Katakana", i.kana, i.transliteration, "N/A");
             }   
-            else if (search_value === temp_kana) {
+            else if (trimmed_value === temp_kana) {
                 insert_valRow(table_ID, "Katakana", i.kana, i.transliteration, "N/A");
             }
         }
@@ -641,13 +643,13 @@ search_out = (search_value, table_ID) => {
             var temp_kana = trimAll(i.kana.toLowerCase());
             var temp_translation = trimAll(i.translation.toLowerCase());
 
-            if (search_value === temp_transliteration) {
+            if (trimmed_value === temp_transliteration) {
                 insert_valRow(table_ID, "Kanji", i.kana, i.transliteration, i.translation);
             }   
-            else if (search_value === temp_kana) {
+            else if (trimmed_value === temp_kana) {
                 insert_valRow(table_ID, "Kanji", i.kana, i.transliteration, i.translation);
             }
-            else if (search_value === temp_translation) {
+            else if (trimmed_value === temp_translation) {
                 insert_valRow(table_ID, "Kanji", i.kana, i.transliteration, i.translation);
             }
         }
@@ -657,13 +659,13 @@ search_out = (search_value, table_ID) => {
             var temp_kana = trimAll(i.kana.toLowerCase());
             var temp_translation = trimAll(i.translation.toLowerCase());
 
-            if (search_value === temp_transliteration) {
+            if (trimmed_value === temp_transliteration) {
                 insert_valRow(table_ID, "General <br/> Hiragana", i.kana, i.transliteration, i.translation);
             }   
-            else if (search_value === temp_kana) {
+            else if (trimmed_value === temp_kana) {
                 insert_valRow(table_ID, "General <br/> Hiragana", i.kana, i.transliteration, i.translation);
             }
-            else if (search_value === temp_translation) {
+            else if (trimmed_value === temp_translation) {
                 insert_valRow(table_ID, "General <br/> Hiragana", i.kana, i.transliteration, i.translation);
             }
         }
@@ -673,13 +675,13 @@ search_out = (search_value, table_ID) => {
             var temp_kana = trimAll(i.kana.toLowerCase());
             var temp_translation = trimAll(i.translation.toLowerCase());
 
-            if (search_value === temp_transliteration) {
+            if (trimmed_value === temp_transliteration) {
                 insert_valRow(table_ID, "General <br/> Katakana", i.kana, i.transliteration, i.translation);
             }   
-            else if (search_value === temp_kana) {
+            else if (trimmed_value === temp_kana) {
                 insert_valRow(table_ID, "General <br/> Katakana", i.kana, i.transliteration, i.translation);
             }
-            else if (search_value === temp_translation) {
+            else if (trimmed_value === temp_translation) {
                 insert_valRow(table_ID, "General <br/> Katakana", i.kana, i.transliteration, i.translation);
             }
         }
@@ -708,7 +710,7 @@ tableBGColor_smoke = () => {
 
 // Handle the search submission.
 search_handler = () => {
-    var search_value = trimAll(document.getElementById("search-box").value.toLowerCase());
+    var search_value = document.getElementById("search-box").value;
     tableBGColor_smoke(); clear_table();
     search_out(search_value, "search-output"); 
     search_log(search_value);
