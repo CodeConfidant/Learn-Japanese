@@ -559,17 +559,19 @@ searchlog_general_katakana = (search_value) => {
 
 // Log search match to console.
 search_log = (search_value) => {
-    if (search_value.length === 0){
+    var trimmed_value = trimAll(search_value.toLowerCase());
+
+    if (trimmed_value.length === 0){
         console.clear();
         console.log("The search query is empty!");
     }
     else {
         console.clear();
-        searchlog_hiragana(search_value);
-        searchlog_katakana(search_value);
-        searchlog_kanji(search_value);
-        searchlog_general_hiragana(search_value);
-        searchlog_general_katakana(search_value);
+        searchlog_hiragana(trimmed_value);
+        searchlog_katakana(trimmed_value);
+        searchlog_kanji(trimmed_value);
+        searchlog_general_hiragana(trimmed_value);
+        searchlog_general_katakana(trimmed_value);
     }
 };
 
