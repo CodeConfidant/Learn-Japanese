@@ -477,10 +477,10 @@ searchlog_hiragana = (search_value) => {
         var temp_kana = trimAll(i.kana.toLowerCase())
 
         if (search_value === temp_transliteration) {
-            console.log("Hiragana: { Transliteration:", i.transliteration, ", Kana:", i.kana, "}")
+            console.log("Hiragana:", i)
         }   
         else if (search_value === temp_kana) {
-            console.log("Hiragana: { Transliteration:", i.transliteration, ", Kana:", i.kana, "}")
+            console.log("Hiragana:", i)
         }
     }
 };
@@ -492,10 +492,10 @@ searchlog_katakana = (search_value) => {
         var temp_kana = trimAll(i.kana.toLowerCase())
 
         if (search_value === temp_transliteration) {
-            console.log("Katakana: { Transliteration:", i.transliteration, ", Kana:", i.kana, "}")
+            console.log("Katakana:", i)
         }   
         else if (search_value === temp_kana) {
-            console.log("Katakana: { Transliteration:", i.transliteration, ", Kana:", i.kana, "}")
+            console.log("Katakana:", i)
         }
     }
 };
@@ -508,13 +508,13 @@ searchlog_kanji = (search_value) => {
         var temp_translation = trimAll(i.translation.toLowerCase())
 
         if (search_value === temp_transliteration) {
-            console.log("Kanji: { Transliteration:", i.transliteration, ", Kana:", i.kana, ", Translation:", i.translation, "}")
+            console.log("Kanji:", i)
         }   
         else if (search_value === temp_kana) {
-            console.log("Kanji: { Transliteration:", i.transliteration, ", Kana:", i.kana, ", Translation:", i.translation, "}")
+            console.log("Kanji:", i)
         }
         else if (search_value === temp_translation) {
-            console.log("Kanji: { Transliteration:", i.transliteration, ", Kana:", i.kana, ", Translation:", i.translation, "}")
+            console.log("Kanji:", i)
         }
     }
 };
@@ -527,13 +527,13 @@ searchlog_general_hiragana = (search_value) => {
         var temp_translation = trimAll(i.translation.toLowerCase())
 
         if (search_value === temp_transliteration) {
-            console.log("General Hiragana: { Transliteration:", i.transliteration, ", Kana:", i.kana, ", Translation:", i.translation, "}")
+            console.log("General Hiragana:", i)
         }   
         else if (search_value === temp_kana) {
-            console.log("General Hiragana: { Transliteration:", i.transliteration, ", Kana:", i.kana, ", Translation:", i.translation, "}")
+            console.log("General Hiragana:", i)
         }
         else if (search_value === temp_translation) {
-            console.log("General Hiragana: { Transliteration:", i.transliteration, ", Kana:", i.kana, ", Translation:", i.translation, "}")
+            console.log("General Hiragana:", i)
         }
     }
 };
@@ -546,13 +546,13 @@ searchlog_general_katakana = (search_value) => {
         var temp_translation = trimAll(i.translation.toLowerCase())
 
         if (search_value === temp_transliteration) {
-            console.log("General Katakana: { Transliteration:", i.transliteration, ", Kana:", i.kana, ", Translation:", i.translation, "}")
+            console.log("General Katakana:", i)
         }   
         else if (search_value === temp_kana) {
-            console.log("General Katakana: { Transliteration:", i.transliteration, ", Kana:", i.kana, ", Translation:", i.translation, "}")
+            console.log("General Katakana:", i)
         }
         else if (search_value === temp_translation) {
-            console.log("General Katakana: { Transliteration:", i.transliteration, ", Kana:", i.kana, ", Translation:", i.translation, "}")
+            console.log("General Katakana:", i)
         }
     }
 };
