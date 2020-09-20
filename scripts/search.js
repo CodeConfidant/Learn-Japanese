@@ -344,13 +344,13 @@ trimNumbers = (arg) => {
         }
     }
 
-    return arg
+    return arg;
 };
 
 // Remove whitespace characters from argument string and return.
 trimSpace = (arg) => {
-    arg = arg.replace(/ /g, "")
-    return arg
+    arg = arg.replace(/ /g, "");
+    return arg;
 };
 
 // Remove special characters from argument string and return.
@@ -452,35 +452,35 @@ trimSpec = (arg) => {
         }
     }
 
-    return arg
+    return arg;
 };
 
 // Remove line-break characters from argument string and return.
 trimLineBreak = (arg) => {
-    arg = arg.replace(/\\/g, "")
-    return arg
+    arg = arg.replace(/\\/g, "");
+    return arg;
 };
 
 // Remove numbers, whitespace, special, and line break characters from argument string and return.
 trimAll = (arg) => {
-    arg = trimNumbers(arg)
-    arg = trimSpace(arg)
-    arg = trimSpec(arg)
-    arg = trimLineBreak(arg)
-    return arg
+    arg = trimNumbers(arg);
+    arg = trimSpace(arg);
+    arg = trimSpec(arg);
+    arg = trimLineBreak(arg);
+    return arg;
 };
 
 // Check argument for matches in Hiragana object and log to console.
 searchlog_hiragana = (search_value) => {
     for (var i of hiragana) {
-        var temp_transliteration = trimAll(i.transliteration.toLowerCase())
-        var temp_kana = trimAll(i.kana.toLowerCase())
+        var temp_transliteration = trimAll(i.transliteration.toLowerCase());
+        var temp_kana = trimAll(i.kana.toLowerCase());
 
         if (search_value === temp_transliteration) {
-            console.log("Hiragana:", i)
+            console.log("Hiragana:", i);
         }   
         else if (search_value === temp_kana) {
-            console.log("Hiragana:", i)
+            console.log("Hiragana:", i);
         }
     }
 };
@@ -488,14 +488,14 @@ searchlog_hiragana = (search_value) => {
 // Check argument for matches in Katakana object and log to console.
 searchlog_katakana = (search_value) => {
     for (var i of katakana) {
-        var temp_transliteration = trimAll(i.transliteration.toLowerCase())
-        var temp_kana = trimAll(i.kana.toLowerCase())
+        var temp_transliteration = trimAll(i.transliteration.toLowerCase());
+        var temp_kana = trimAll(i.kana.toLowerCase());
 
         if (search_value === temp_transliteration) {
-            console.log("Katakana:", i)
+            console.log("Katakana:", i);
         }   
         else if (search_value === temp_kana) {
-            console.log("Katakana:", i)
+            console.log("Katakana:", i);
         }
     }
 };
@@ -503,18 +503,18 @@ searchlog_katakana = (search_value) => {
 // Check argument for matches in Kanji object and log to console.
 searchlog_kanji = (search_value) => {
     for (var i of kanji) {
-        var temp_transliteration = trimAll(i.transliteration.toLowerCase())
-        var temp_kana = trimAll(i.kana.toLowerCase())
-        var temp_translation = trimAll(i.translation.toLowerCase())
+        var temp_transliteration = trimAll(i.transliteration.toLowerCase());
+        var temp_kana = trimAll(i.kana.toLowerCase());
+        var temp_translation = trimAll(i.translation.toLowerCase());
 
         if (search_value === temp_transliteration) {
-            console.log("Kanji:", i)
+            console.log("Kanji:", i);
         }   
         else if (search_value === temp_kana) {
-            console.log("Kanji:", i)
+            console.log("Kanji:", i);
         }
         else if (search_value === temp_translation) {
-            console.log("Kanji:", i)
+            console.log("Kanji:", i);
         }
     }
 };
@@ -522,18 +522,18 @@ searchlog_kanji = (search_value) => {
 // Check argument for matches in General Hiragana object and log to console.
 searchlog_general_hiragana = (search_value) => {
     for (var i of general_hiragana) {
-        var temp_transliteration = trimAll(i.transliteration.toLowerCase())
-        var temp_kana = trimAll(i.kana.toLowerCase())
-        var temp_translation = trimAll(i.translation.toLowerCase())
+        var temp_transliteration = trimAll(i.transliteration.toLowerCase());
+        var temp_kana = trimAll(i.kana.toLowerCase());
+        var temp_translation = trimAll(i.translation.toLowerCase());
 
         if (search_value === temp_transliteration) {
-            console.log("General Hiragana:", i)
+            console.log("General Hiragana:", i);
         }   
         else if (search_value === temp_kana) {
-            console.log("General Hiragana:", i)
+            console.log("General Hiragana:", i);
         }
         else if (search_value === temp_translation) {
-            console.log("General Hiragana:", i)
+            console.log("General Hiragana:", i);
         }
     }
 };
@@ -541,18 +541,18 @@ searchlog_general_hiragana = (search_value) => {
 // Check argument for matches in General Katakana object and log to console.
 searchlog_general_katakana = (search_value) => {
     for (var i of general_katakana) {
-        var temp_transliteration = trimAll(i.transliteration.toLowerCase())
-        var temp_kana = trimAll(i.kana.toLowerCase())
-        var temp_translation = trimAll(i.translation.toLowerCase())
+        var temp_transliteration = trimAll(i.transliteration.toLowerCase());
+        var temp_kana = trimAll(i.kana.toLowerCase());
+        var temp_translation = trimAll(i.translation.toLowerCase());
 
         if (search_value === temp_transliteration) {
-            console.log("General Katakana:", i)
+            console.log("General Katakana:", i);
         }   
         else if (search_value === temp_kana) {
-            console.log("General Katakana:", i)
+            console.log("General Katakana:", i);
         }
         else if (search_value === temp_translation) {
-            console.log("General Katakana:", i)
+            console.log("General Katakana:", i);
         }
     }
 };
@@ -694,8 +694,6 @@ direct_match = (search_value) => {
 
     return false;
 };
-
-
 
 // Output search match to empty table.
 search_out = (search_value, table_ID) => {
@@ -861,7 +859,6 @@ search_out = (search_value, table_ID) => {
         }
     }    
 };
-
 
 // Delete table interior HTML.
 clear_table = () => {
