@@ -201,7 +201,7 @@ var kanji = [
 var general_hiragana = [
 
     // Articles
-    {translation: "The", kana:"の", transliteration:"No"},
+    {translation: "The", kana:"その", transliteration:"Sono"},
 
     // Nouns
     {translation: "Rabbit", kana:"うさぎ", transliteration:"Usagi"},
@@ -227,6 +227,12 @@ var general_hiragana = [
     {translation: "Sword-Master", kana:"けんせい", transliteration:"Kensei"},
     {translation: "Sword-Saint", kana:"けんせい", transliteration:"Kensei"},
 
+    // Pronouns
+    {translation: "This", kana:"この", transliteration:"Kono"},
+    {translation: "This", kana:"これ", transliteration:"Kore"},
+    {translation: "That", kana:"ぁの", transliteration:"Ano"},
+    {translation: "Which", kana:"どの", transliteration:"Dono"},
+
     // Verbs
     {translation: "Learn", kana:"まなぶ", transliteration:"Manabu"},
 
@@ -240,15 +246,16 @@ var general_hiragana = [
     {translation: "Wooden", kana:"ぼく", transliteration:"Boku"},
 
     // Interjections
-    {translation: "Hello", kana:"こにちわ", transliteration:"Konichiwa"},
+    {translation: "Hello", kana:"こんにちわ", transliteration:"Konnichiwa"},
     {translation: "Goodbye", kana:"さよむら", transliteration:"Sayonara"},
     {translation: "Thanks", kana:"ありがと", transliteration:"Arigato"},
     {translation: "Thank-You", kana:"ありがと", transliteration:"Arigato"},
     {translation: "Good-Evening", kana:"こんばんわ", transliteration:"Konbanwa"},
+    {translation: "Good-Afternoon", kana:"こんにちわん", transliteration:"Konnichiwan"},
 
     // Prepositions
     {translation: "Of", kana:"の", transliteration:"No"},
-    {translation: "On", kana:"の", transliteration:"No"},
+    {translation: "At", kana:"の", transliteration:"No"},
     {translation: "What", kana:"なに", transliteration:"Nani"},
 ];
 
@@ -256,7 +263,7 @@ var general_hiragana = [
 var general_katakana = [
 
     // Articles
-    {translation: "The", kana:"ノ", transliteration:"No"},
+    {translation: "The", kana:"ソノ", transliteration:"Sono"},
 
     // Nouns
     {translation: "Rabbit", kana:"ウサギ", transliteration:"Usagi"},
@@ -282,6 +289,12 @@ var general_katakana = [
     {translation: "Sword-Master", kana:"ケンセイ", transliteration:"Kensei"},
     {translation: "Sword-Saint", kana:"ケンセイ", transliteration:"Kensei"},
 
+    // Pronouns
+    {translation: "This", kana:"コノ", transliteration:"Kono"},
+    {translation: "This", kana:"コレ", transliteration:"Kore"},
+    {translation: "That", kana:"アノ", transliteration:"Ano"},
+    {translation: "Which", kana:"ドノ", transliteration:"Dono"},
+
     // Verbs
     {translation: "Learn", kana:"マナブ", transliteration:"Manabu"},
 
@@ -295,15 +308,16 @@ var general_katakana = [
     {translation: "Wooden", kana:"ボク", transliteration:"Boku"},
 
     // Interjections
-    {translation: "Hello", kana:"コニチワ", transliteration:"Konichiwa"},
+    {translation: "Hello", kana:"コンニチワ", transliteration:"Konnichiwa"},
     {translation: "Goodbye", kana:"サヨナラ", transliteration:"Sayonara"},
     {translation: "Thanks", kana:"アリガト", transliteration:"Arigato"},
     {translation: "Thank-You", kana:"アリガト", transliteration:"Arigato"},
     {translation: "Good-Evening", kana:"コンバンワ", transliteration:"Konbanwa"},
+    {translation: "Good-Afternoon", kana:"コンニチワン", transliteration:"Konnichiwan"},
 
     // Prepositions
     {translation: "Of", kana:"ノ", transliteration:"No"},
-    {translation: "On", kana:"ノ", transliteration:"No"},
+    {translation: "At", kana:"ノ", transliteration:"No"},
     {translation: "What", kana:"ナニ", transliteration:"Nani"},
 ];
 
