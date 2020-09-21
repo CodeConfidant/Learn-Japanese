@@ -4,6 +4,6 @@
 
     Note: The database of translations is limited at the moment. I'll be adding more over time.
 
-![Preview](img/preview.jpg "Desktop Speed Score")
+![Preview](img/preview-desktop.jpg "Desktop Preview")
 
 ---
