@@ -160,3 +160,23 @@ trimAll = (arg) => {
     arg = trimLineBreak(arg);
     return arg;
 };
+
+// Delete table interior HTML.
+clear_table = () => {
+    var table = document.getElementById("search-output"); table.innerHTML = "";
+};
+
+// Reset value of input.
+reset = () => {
+    document.getElementById("search-box").value = "";
+};
+
+// Change table background color to black.
+tableBGColor_black = () => {
+    document.getElementById("search-output").style.backgroundColor = "black";
+};
+
+// Change table background color to whitesmoke.
+tableBGColor_smoke = () => {
+    document.getElementById("search-output").style.backgroundColor = "whitesmoke";
+};

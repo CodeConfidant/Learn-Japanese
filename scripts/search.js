@@ -388,26 +388,6 @@ search_out = (search_value, table_ID) => {
     }    
 };
 
-// Delete table interior HTML.
-clear_table = () => {
-    var table = document.getElementById("search-output"); table.innerHTML = "";
-};
-
-// Reset value of input.
-reset = () => {
-    document.getElementById("search-box").value = "";
-};
-
-// Change table background color to black.
-tableBGColor_black = () => {
-    document.getElementById("search-output").style.backgroundColor = "black";
-};
-
-// Change table background color to whitesmoke.
-tableBGColor_smoke = () => {
-    document.getElementById("search-output").style.backgroundColor = "whitesmoke";
-};
-
 // Handle the search submission.
 search_handler = () => {
     var search_value = document.getElementById("search-box").value;
