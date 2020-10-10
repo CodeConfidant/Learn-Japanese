@@ -48,7 +48,7 @@ searchlog_kanji = (search_value) => {
 };
 
 // Check argument for matches in General Hiragana object and log to console.
-searchlog_general_hiragana = (search_value) => {
+searchlog_genHiragana = (search_value) => {
     for (var i of general_hiragana) {
         var temp_transliteration = trimAll(i.transliteration.toLowerCase());
         var temp_kana = trimAll(i.kana.toLowerCase());
@@ -67,7 +67,7 @@ searchlog_general_hiragana = (search_value) => {
 };
 
 // Check argument for matches in General Katakana object and log to console.
-searchlog_general_katakana = (search_value) => {
+searchlog_genKatakana = (search_value) => {
     for (var i of general_katakana) {
         var temp_transliteration = trimAll(i.transliteration.toLowerCase());
         var temp_kana = trimAll(i.kana.toLowerCase());
@@ -99,8 +99,8 @@ search_log = (search_value) => {
         searchlog_hiragana(trimmed_value);
         searchlog_katakana(trimmed_value);
         searchlog_kanji(trimmed_value);
-        searchlog_general_hiragana(trimmed_value);
-        searchlog_general_katakana(trimmed_value);
+        searchlog_genHiragana(trimmed_value);
+        searchlog_genKatakana(trimmed_value);
     }
     else {
         console.clear();
@@ -110,8 +110,8 @@ search_log = (search_value) => {
             searchlog_hiragana(j);
             searchlog_katakana(j);
             searchlog_kanji(j);
-            searchlog_general_hiragana(j);
-            searchlog_general_katakana(j);
+            searchlog_genHiragana(j);
+            searchlog_genKatakana(j);
         }     
     }
 };
