@@ -72,7 +72,6 @@ a {
     text-decoration: none;
     background-color: black;
     color: whitesmoke;
-    border: thin transparent black;
     border-radius: 2px;
     font-style: oblique;
     font-weight: bold;
@@ -98,12 +97,10 @@ a:hover {
 }
 
 #search-box {
-    width: 50%;
     max-width: 50%;
-    max-height: 50%;
+    max-height: 100%;
     min-width: 50%;
     min-height: 25%;
-    height: 50%;
     display: block;
     background-color: whitesmoke;
     padding: 1rem;
