@@ -28,7 +28,7 @@ nav {
     height: auto;
     border-radius: 2px;
     border-style: hidden;
-    background-color: black;
+    background-color: transparent;
     position: fixed;
     top: 20%;
     display: block;
