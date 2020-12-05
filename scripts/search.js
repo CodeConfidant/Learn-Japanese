@@ -94,7 +94,7 @@ search_log = (search_value) => {
         console.clear();
         console.log("The search query is empty!");
     }
-    else if (direct_match(trimmed_value) === true) {
+    else if (isMatch(trimmed_value) === true) {
         console.clear();
         searchlog_hiragana(trimmed_value);
         searchlog_katakana(trimmed_value);
@@ -146,8 +146,8 @@ insert_valRow = (table_ID, type, kana, transliteration, translation) => {
     translationVal.innerHTML = translation;
 };
 
-// Return true or false for whether a direct translation, transliteration, or kana symbol exists within the objects.
-direct_match = (search_value) => {
+// Return true or false for whether a transliteration or kana symbol exists within the hiragana object.
+isHiragana = (search_value) =>{
     for (var i of hiragana) {
         var temp_transliteration = trimAll(i.transliteration.toLowerCase());
         var temp_kana = trimAll(i.kana.toLowerCase());
@@ -160,6 +160,12 @@ direct_match = (search_value) => {
         }
     }
 
+    return false;
+
+};
+
+// Return true or false for whether a transliteration or kana symbol exists within the katakana object.
+isKatakana = (search_value) =>{
     for (var i of katakana) {
         var temp_transliteration = trimAll(i.transliteration.toLowerCase());
         var temp_kana = trimAll(i.kana.toLowerCase());
@@ -172,6 +178,11 @@ direct_match = (search_value) => {
         }
     }
 
+    return false;
+};
+
+// Return true or false for whether a translation, transliteration, or kana symbol exists within the kanji object.
+isKanji = (search_value) =>{
     for (var i of kanji) {
         var temp_transliteration = trimAll(i.transliteration.toLowerCase());
         var temp_kana = trimAll(i.kana.toLowerCase());
@@ -187,7 +198,12 @@ direct_match = (search_value) => {
             return true;
         }
     }
-    
+
+    return false;
+};
+
+// Return true or false for whether a translation, transliteration, or kana symbol exists within the general_hiragana object.
+isGenHiragana = (search_value) =>{
     for (var i of general_hiragana) {
         var temp_transliteration = trimAll(i.transliteration.toLowerCase());
         var temp_kana = trimAll(i.kana.toLowerCase());
@@ -204,6 +220,12 @@ direct_match = (search_value) => {
         }
     }
 
+    return false;
+
+};
+
+// Return true or false for whether a direct translation, transliteration, or kana symbol exists within the general_katakana object.
+isGenKatakana = (search_value) =>{
     for (var i of general_katakana) {
         var temp_transliteration = trimAll(i.transliteration.toLowerCase());
         var temp_kana = trimAll(i.kana.toLowerCase());
@@ -221,6 +243,28 @@ direct_match = (search_value) => {
     }
 
     return false;
+};
+
+// Return true or false for whether a direct translation, transliteration, or kana symbol exists within the objects.
+isMatch = (search_value) => {
+   if (isHiragana(search_value) === true){
+       return true;
+   }
+   else if (isKatakana(search_value) === true){
+       return true;
+   }
+   else if (isKanji(search_value) === true){
+       return true;
+   }
+   else if (isGenHiragana(search_value) === true){
+       return true;
+   }
+   else if (isGenKatakana(search_value) === true){
+       return true;
+   }
+   else {
+       return false;
+   }
 };
 
 // Output Hiragana search match to table. 
@@ -318,7 +362,7 @@ search_out = (search_value, table_ID) => {
     if (search_value.length < 1) {
         clear_table(); tableBGColor_black();
     }
-    else if (direct_match(trimmed_value) === true) {
+    else if (isMatch(trimmed_value) === true) {
         insert_headRow(table_ID);
         search_out_hiragana(trimmed_value, table_ID);
         search_out_katakana(trimmed_value, table_ID);
