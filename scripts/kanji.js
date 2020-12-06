@@ -21,7 +21,7 @@ var kanji = [
     {translation: "Honor", kana:"名誉", transliteration:"Meiyo"},
     {translation: "Loyalty", kana:"忠義", transliteration:"Chugi"},
     {translation: "Self-Control", kana:"自制", transliteration:"Jisei"},
-    {translation: "Filial Piety", kana:"孝", transliteration:"Ko"},
+    {translation: "Filial-Piety", kana:"孝", transliteration:"Ko"},
     {translation: "Wisdom", kana:"智", transliteration:"Chi"},
     {translation: "Fraternity", kana:"悌", transliteration:"Tei"},
     

@@ -15,6 +15,9 @@ var hiragana = [
     {transliteration: "Da", kana: "だ"}, {transliteration: "De", kana: "で"},
     {transliteration: "Do", kana: "ど"}, {transliteration: "Du", kana: "づ"},
     {transliteration: "Dzu", kana: "づ"},
+
+    // F Consonant
+    {transliteration: "Fu", kana: "ふ"},
     
     // G Consonant
     {transliteration: "Ga", kana: "が"}, {transliteration: "Ge", kana: "げ"},
@@ -57,8 +60,8 @@ var hiragana = [
     // S Consonant
     {transliteration: "Sa", kana: "さ"}, {transliteration: "Se", kana: "せ"},
     {transliteration: "Si", kana: "し"}, {transliteration: "Shi", kana: "し"},
-    {transliteration: "So", kana: "そ"}, {transliteration: "Su", kana: "す"},
-    {transliteration: "Shu", kana: "す"},
+    {transliteration: "So", kana: "そ"}, {transliteration: "Sho", kana: "そ"},
+    {transliteration: "Su", kana: "す"}, {transliteration: "Shu", kana: "す"},
 
     // T Consonant
     {transliteration: "Ta", kana: "た"}, {transliteration: "Te", kana: "て"},
