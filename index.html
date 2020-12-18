@@ -26,11 +26,11 @@
             <h1 class="main-heading">学ぶ Learn <br/> 日本語 Japanese</h1>
         </header>
 
-        <form id="search-form" name="search" rel="search" target="_self" accept-charset="UTF-8" autocomplete="off" autofocus="off">
-            <textarea id="search-box" name="search-box" form="search-form" type="text" value="" minlength="1" maxlength="1656" placeholder="Enter Query" autocomplete="off" autofocus="off"></textarea>
+        <form id="search-form" rel="search" target="_self" accept-charset="UTF-8" autocomplete="off" autofocus="off">
+            <textarea id="search-box" form="search-form" type="text" value="" minlength="1" maxlength="1656" placeholder="Enter Query" autocomplete="off" autofocus="off"></textarea>
             <div class="button-container">
-                <button id="reset-button" name="reset-button" form="search-form" type="button" autofocus="off" onclick="reset(); clear_table(); tableBGColor_black(); console.clear(); return false">Reset</button>
-                <button id="submit-button" name="submit-button" form="search-form" type="button" autofocus="off" onclick="search_handler(); return false">Search</button>
+                <button id="reset-button" form="search-form" type="button" autofocus="off" onclick="reset(); clear_table(); tableBGColor_black(); console.clear()">Reset</button>
+                <button id="submit-button" form="search-form" type="button" autofocus="off" onclick="search_handler()">Search</button>
             </div>
         </form>
         
