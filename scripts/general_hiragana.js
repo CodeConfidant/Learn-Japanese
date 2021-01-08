@@ -8,9 +8,11 @@ var general_hiragana = [
     {translation: "Rabbit", kana:"うさぎ", transliteration:"Usagi"},
     {translation: "Bear", kana:"くま", transliteration:"Kuma"},
     {translation: "Fox", kana:"きっね", transliteration:"Kitsune"},
+    {translation: "Weasel", kana:"はち", transliteration:"Hachi"},
     {translation: "Tiger", kana:"とら", transliteration:"Tora"},
     {translation: "Honey", kana:"はちみっ", transliteration:"Hachimitsu"},
     {translation: "Country", kana:"こく", transliteration:"Koku"},
+    {translation: "Foreign-Country", kana:"がいこく", transliteration:"Gaikoku"},
     {translation: "Hand", kana:"て", transliteration:"Te"},
     {translation: "Empty-Hand", kana:"からて", transliteration:"Karate"},
     {translation: "Sword-Path", kana:"けんど", transliteration:"Kendo"},
@@ -45,6 +47,15 @@ var general_hiragana = [
     {translation: "Demon", kana:"おに", transliteration:"Oni"},
     {translation: "Duty", kana:"ぎり", transliteration:"Giri"},
     {translation: "Defilement", kana:"けがれ", transliteration:"Kegare"},
+    {translation: "God", kana:"かみ", transliteration:"Kami"},
+    {translation: "Car", kana:"さ", transliteration:"Sha"},
+    {translation: "Foreign-Car", kana:"がいさ", transliteration:"Gaisha"},
+    {translation: "Teacher", kana:"せんせい", transliteration:"Sensei"},
+    {translation: "High-School", kana:"こおこお", transliteration:"Kookoo"},
+    {translation: "Fan", kana:"うちわ", transliteration:"Uchiwa"},
+    {translation: "Person", kana:"じん", transliteration:"Jin"},
+    {translation: "Foreigner", kana:"がいじん", transliteration:"Gaijin"},
+    {translation: "To-do", kana:"いたす", transliteration:"Itasu"},
 
     // Pronouns
     {translation: "This", kana:"この", transliteration:"Kono"},
@@ -52,21 +63,27 @@ var general_hiragana = [
     {translation: "That", kana:"ぁの", transliteration:"Ano"},
     {translation: "Which", kana:"どの", transliteration:"Dono"},
     {translation: "Everyone", kana:"みなさん", transliteration:"Minasan"},
+    {translation: "You", kana:"どう", transliteration:"Dou"},
 
     // Verbs
     {translation: "Learn", kana:"まなぶ", transliteration:"Manabu"},
     {translation: "Be", kana:"なる", transliteration:"Naru"},
+    {translation: "Welcome", kana:"いたしまして", transliteration:"Itashimashite"},
 
     // Adverbs
     {translation: "Out", kana:"でる", transliteration:"Deru"},
     {translation: "Very", kana:"ども", transliteration:"Domo"},
     {translation: "Yes", kana:"はい", transliteration:"Hai"},
     {translation: "No", kana:"ばんご", transliteration:"Bango"},
+    {translation: "How", kana:"どう", transliteration:"Dou"},
 
     // Adjectives
     {translation: "Many", kana:"ども", transliteration:"Domo"},
     {translation: "Martial", kana:"ぶ", transliteration:"Bu"},
     {translation: "Wooden", kana:"ぼく", transliteration:"Boku"},
+    {translation: "Improved", kana:"かい", transliteration:"Kai"},
+    {translation: "Difficult", kana:"かたい", transliteration:"Katai"},
+    {translation: "Foreign", kana:"がい", transliteration:"Gai"},
 
     // Interjections
     {translation: "Hello", kana:"こんにちわ", transliteration:"Konnichiwa"},
@@ -75,6 +92,7 @@ var general_hiragana = [
     {translation: "Thank-You", kana:"ありがと", transliteration:"Arigato"},
     {translation: "Good-Evening", kana:"こんばんわ", transliteration:"Konbanwa"},
     {translation: "Good-Afternoon", kana:"こんにちわん", transliteration:"Konnichiwan"},
+    {translation: "You're Welcome", kana:"どう-いたしまして", transliteration:"Dou-Itashimashite"},
 
     // Prepositions
     {translation: "Of", kana:"の", transliteration:"No"},

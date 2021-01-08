@@ -58,10 +58,9 @@ var hiragana = [
     {transliteration: "Ru", kana: "る"},
     
     // S Consonant
-    {transliteration: "Sa", kana: "さ"}, {transliteration: "Se", kana: "せ"},
-    {transliteration: "Si", kana: "し"}, {transliteration: "Shi", kana: "し"},
-    {transliteration: "So", kana: "そ"}, {transliteration: "Sho", kana: "そ"},
-    {transliteration: "Su", kana: "す"}, {transliteration: "Shu", kana: "す"},
+    {transliteration: "Sa", kana: "さ"},  {transliteration: "Sha", kana: "さ"}, {transliteration: "Se", kana: "せ"},
+    {transliteration: "Si", kana: "し"},  {transliteration: "Shi", kana: "し"}, {transliteration: "So", kana: "そ"}, 
+    {transliteration: "Sho", kana: "そ"}, {transliteration: "Su", kana: "す"},  {transliteration: "Shu", kana: "す"},
 
     // T Consonant
     {transliteration: "Ta", kana: "た"}, {transliteration: "Te", kana: "て"},

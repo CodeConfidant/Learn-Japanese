@@ -58,10 +58,9 @@ var katakana = [
     {transliteration: "Ru", kana: "ル"},
     
     // S Consonant
-    {transliteration: "Sa", kana: "サ"}, {transliteration: "Se", kana: "セ"},
-    {transliteration: "Si", kana: "シ"}, {transliteration: "Shi", kana: "シ"},
-    {transliteration: "So", kana: "ソ"}, {transliteration: "Sho", kana: "ソ"},
-    {transliteration: "Su", kana: "ス"}, {transliteration: "Shu", kana: "ス"},
+    {transliteration: "Sa", kana: "サ"},  {transliteration: "Sha", kana: "サ"}, {transliteration: "Se", kana: "セ"},
+    {transliteration: "Si", kana: "シ"},  {transliteration: "Shi", kana: "シ"}, {transliteration: "So", kana: "ソ"}, 
+    {transliteration: "Sho", kana: "ソ"}, {transliteration: "Su", kana: "ス"},  {transliteration: "Shu", kana: "ス"},
 
     // T Consonant
     {transliteration: "Ta", kana: "タ"}, {transliteration: "Te", kana: "テ"},
