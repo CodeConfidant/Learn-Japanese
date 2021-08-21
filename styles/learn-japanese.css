@@ -165,6 +165,16 @@ a:hover {
     display: inline-block;
 }
 
+@media only screen and (min-width: 1148px) {
+    nav {
+        position: absolute !important;
+    }
+
+    #nav-links {
+        display: block !important;
+    }
+}
+
 @media only screen and (max-width: 1147px) {
     table {
         width: 100%;
