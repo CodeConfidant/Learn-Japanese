@@ -5,7 +5,7 @@ search_log = (search_value, dictionary) => {
     var type = dictionary[0].type.toLowerCase();
 
     if (search_value.length > 0){
-        if (isMatch(trimmed_value, dictionary, type) === true) {
+        if (isMatch(trimmed_value, dictionary) === true) {
             if (type === "hiragana" | type === "katakana") {
                 for (var node of dictionary) {
                     var transliteration = trimAll(node.transliteration.toLowerCase());
@@ -130,7 +130,7 @@ search_out = (search_value, dictionary, table_ID) => {
     var type = dictionary[0].type.toLowerCase();
 
     if (search_value.length > 0){
-        if (isMatch(trimmed_value, dictionary, type) === true) {
+        if (isMatch(trimmed_value, dictionary) === true) {
             if (type === "hiragana" | type === "katakana") {
                 for (var node of dictionary) {
                     var transliteration = trimAll(node.transliteration.toLowerCase());
