@@ -1,119 +1,102 @@
-// Check argument for matches in Hiragana object and log to console.
-searchlog_hiragana = (search_value) => {
-    for (var i of hiragana) {
-        var temp_transliteration = trimAll(i.transliteration.toLowerCase());
-        var temp_kana = trimAll(i.kana.toLowerCase());
-
-        if (search_value === temp_transliteration) {
-            console.log("Hiragana:", i);
-        }   
-        else if (search_value === temp_kana) {
-            console.log("Hiragana:", i);
-        }
-    }
-};
-
-// Check argument for matches in Katakana object and log to console.
-searchlog_katakana = (search_value) => {
-    for (var i of katakana) {
-        var temp_transliteration = trimAll(i.transliteration.toLowerCase());
-        var temp_kana = trimAll(i.kana.toLowerCase());
-
-        if (search_value === temp_transliteration) {
-            console.log("Katakana:", i);
-        }   
-        else if (search_value === temp_kana) {
-            console.log("Katakana:", i);
-        }
-    }
-};
-
-// Check argument for matches in Kanji object and log to console.
-searchlog_kanji = (search_value) => {
-    for (var i of kanji) {
-        var temp_transliteration = trimAll(i.transliteration.toLowerCase());
-        var temp_kana = trimAll(i.kana.toLowerCase());
-        var temp_translation = trimAll(i.translation.toLowerCase());
-
-        if (search_value === temp_transliteration) {
-            console.log("Kanji:", i);
-        }   
-        else if (search_value === temp_kana) {
-            console.log("Kanji:", i);
-        }
-        else if (search_value === temp_translation) {
-            console.log("Kanji:", i);
-        }
-    }
-};
-
-// Check argument for matches in General Hiragana object and log to console.
-searchlog_genHiragana = (search_value) => {
-    for (var i of general_hiragana) {
-        var temp_transliteration = trimAll(i.transliteration.toLowerCase());
-        var temp_kana = trimAll(i.kana.toLowerCase());
-        var temp_translation = trimAll(i.translation.toLowerCase());
-
-        if (search_value === temp_transliteration) {
-            console.log("General Hiragana:", i);
-        }   
-        else if (search_value === temp_kana) {
-            console.log("General Hiragana:", i);
-        }
-        else if (search_value === temp_translation) {
-            console.log("General Hiragana:", i);
-        }
-    }
-};
-
-// Check argument for matches in General Katakana object and log to console.
-searchlog_genKatakana = (search_value) => {
-    for (var i of general_katakana) {
-        var temp_transliteration = trimAll(i.transliteration.toLowerCase());
-        var temp_kana = trimAll(i.kana.toLowerCase());
-        var temp_translation = trimAll(i.translation.toLowerCase());
-
-        if (search_value === temp_transliteration) {
-            console.log("General Katakana:", i);
-        }   
-        else if (search_value === temp_kana) {
-            console.log("General Katakana:", i);
-        }
-        else if (search_value === temp_translation) {
-            console.log("General Katakana:", i);
-        }
-    }
-};
-
-// Log search match to console.
-search_log = (search_value) => {
+// Check search_value argument for matches in dictionary argument and log to console.
+search_log = (search_value, dictionary, type) => {
     var trimmed_value = trimAll(search_value.toLowerCase());
     var search_array = search_value.split(" ");
+    var type = type.toLowerCase();
+
+    if (search_value.length > 0){
+        if (isMatch(trimmed_value, dictionary, type) === true) {
+            if (type === "hiragana" | type === "katakana") {
+                for (var node of dictionary) {
+                    var transliteration = trimAll(node.transliteration.toLowerCase());
+                    var kana = trimAll(node.kana.toLowerCase());
+            
+                    if (trimmed_value === transliteration | trimmed_value === kana) {
+                        console.log(`${type}:`, node);
+                    }   
+                }
+            }
+            else if (type === "kanji" | type === "general hiragana" | type === "general katakana") {
+                for (var node of dictionary) {
+                    var transliteration = trimAll(node.transliteration.toLowerCase());
+                    var kana = trimAll(node.kana.toLowerCase());
+                    var translation = trimAll(node.translation.toLowerCase());
+
+                    if (trimmed_value === transliteration | trimmed_value === kana | trimmed_value === translation) {
+                        console.log(`${type}:`, node);
+                    }   
+                }
+            }
+            else {
+                console.log("There's no proper type designated within the type argument.")
+            }
+        }
+        else {
+            for (var value of search_array) {
+                value = trimAll(value.toLowerCase());
+
+                if (type === "hiragana" | type === "katakana") {
+                    for (var node of dictionary) {
+                        var transliteration = trimAll(node.transliteration.toLowerCase());
+                        var kana = trimAll(node.kana.toLowerCase());
+                
+                        if (value === transliteration | value === kana) {
+                            console.log(`${type}:`, node);
+                        }   
+                    }
+                }
+                else if (type === "kanji" | type === "general hiragana" | type === "general katakana") {
+                    for (var node of dictionary) {
+                        var transliteration = trimAll(node.transliteration.toLowerCase());
+                        var kana = trimAll(node.kana.toLowerCase());
+                        var translation = trimAll(node.translation.toLowerCase());
     
-    if (search_value.length < 1) {
-        console.clear();
-        console.log("The search query is empty!");
-    }
-    else if (isMatch(trimmed_value) === true) {
-        console.clear();
-        searchlog_hiragana(trimmed_value);
-        searchlog_katakana(trimmed_value);
-        searchlog_kanji(trimmed_value);
-        searchlog_genHiragana(trimmed_value);
-        searchlog_genKatakana(trimmed_value);
+                        if (value === transliteration | value === kana | value === translation) {
+                            console.log(`${type}:`, node);
+                        }   
+                    }
+                }
+                else {
+                    console.log("There's no proper type designated within the type argument.")
+                }
+            }
+        }
     }
     else {
-        console.clear();
-        
-        for (var j of search_array) {
-            j = trimAll(j.toLowerCase());
-            searchlog_hiragana(j);
-            searchlog_katakana(j);
-            searchlog_kanji(j);
-            searchlog_genHiragana(j);
-            searchlog_genKatakana(j);
-        }     
+        console.log("Search query is empty.");
     }
+};
+
+// Return true or false for whether a direct translation, transliteration, or kana symbol exists within the objects.
+isMatch = (search_value, dictionary, type) => {
+    var type = type.toLowerCase();
+
+    if (type === "hiragana" | type === "katakana") { 
+        for (var node of dictionary) {
+            var transliteration = trimAll(node.transliteration.toLowerCase());
+            var kana = trimAll(node.kana.toLowerCase());
+    
+            if (search_value === transliteration | search_value === kana) {
+                return true
+            }   
+        } 
+    }
+    else if (type === "kanji" | type === "general hiragana" | type === "general katakana") {
+        for (var node of dictionary) {
+            var transliteration = trimAll(node.transliteration.toLowerCase());
+            var kana = trimAll(node.kana.toLowerCase());
+            var translation = trimAll(node.translation.toLowerCase());
+
+            if (search_value === transliteration | search_value === kana | search_value === translation) {
+                return true
+            }   
+        }
+    }
+    else {
+        console.log("There's no proper type designated within the type argument.")
+    }
+
+    return false
 };
 
 // Insert header row into the table. Add header values.
@@ -146,249 +129,91 @@ insert_valRow = (table_ID, type, kana, transliteration, translation) => {
     translationVal.innerHTML = translation;
 };
 
-// Return true or false for whether a transliteration or kana symbol exists within the hiragana object.
-isHiragana = (search_value) =>{
-    for (var i of hiragana) {
-        var temp_transliteration = trimAll(i.transliteration.toLowerCase());
-        var temp_kana = trimAll(i.kana.toLowerCase());
-
-        if (search_value === temp_transliteration) {
-            return true;
-        }   
-        else if (search_value === temp_kana) {
-            return true;
-        }
-    }
-
-    return false;
-
-};
-
-// Return true or false for whether a transliteration or kana symbol exists within the katakana object.
-isKatakana = (search_value) =>{
-    for (var i of katakana) {
-        var temp_transliteration = trimAll(i.transliteration.toLowerCase());
-        var temp_kana = trimAll(i.kana.toLowerCase());
-
-        if (search_value === temp_transliteration) {
-            return true;
-        }   
-        else if (search_value === temp_kana) {
-            return true;
-        }
-    }
-
-    return false;
-};
-
-// Return true or false for whether a translation, transliteration, or kana symbol exists within the kanji object.
-isKanji = (search_value) =>{
-    for (var i of kanji) {
-        var temp_transliteration = trimAll(i.transliteration.toLowerCase());
-        var temp_kana = trimAll(i.kana.toLowerCase());
-        var temp_translation = trimAll(i.translation.toLowerCase());
-
-        if (search_value === temp_transliteration) {
-            return true;
-        }   
-        else if (search_value === temp_kana) {
-            return true;
-        }
-        else if (search_value === temp_translation) {
-            return true;
-        }
-    }
-
-    return false;
-};
-
-// Return true or false for whether a translation, transliteration, or kana symbol exists within the general_hiragana object.
-isGenHiragana = (search_value) =>{
-    for (var i of general_hiragana) {
-        var temp_transliteration = trimAll(i.transliteration.toLowerCase());
-        var temp_kana = trimAll(i.kana.toLowerCase());
-        var temp_translation = trimAll(i.translation.toLowerCase());
-
-        if (search_value === temp_transliteration) {
-            return true;
-        }   
-        else if (search_value === temp_kana) {
-            return true;
-        }
-        else if (search_value === temp_translation) {
-            return true;
-        }
-    }
-
-    return false;
-
-};
-
-// Return true or false for whether a direct translation, transliteration, or kana symbol exists within the general_katakana object.
-isGenKatakana = (search_value) =>{
-    for (var i of general_katakana) {
-        var temp_transliteration = trimAll(i.transliteration.toLowerCase());
-        var temp_kana = trimAll(i.kana.toLowerCase());
-        var temp_translation = trimAll(i.translation.toLowerCase());
-
-        if (search_value === temp_transliteration) {
-            return true;
-        }   
-        else if (search_value === temp_kana) {
-            return true;
-        }
-        else if (search_value === temp_translation) {
-            return true;
-        }
-    }
-
-    return false;
-};
-
-// Return true or false for whether a direct translation, transliteration, or kana symbol exists within the objects.
-isMatch = (search_value) => {
-   if (isHiragana(search_value) === true){
-       return true;
-   }
-   else if (isKatakana(search_value) === true){
-       return true;
-   }
-   else if (isKanji(search_value) === true){
-       return true;
-   }
-   else if (isGenHiragana(search_value) === true){
-       return true;
-   }
-   else if (isGenKatakana(search_value) === true){
-       return true;
-   }
-   else {
-       return false;
-   }
-};
-
-// Output Hiragana search match to table. 
-search_out_hiragana = (search_value, table_ID) => {
-    for (var i of hiragana) {
-        var temp_transliteration = trimAll(i.transliteration.toLowerCase());
-        var temp_kana = trimAll(i.kana.toLowerCase());
-
-        if (search_value === temp_transliteration) {
-            insert_valRow(table_ID, "Hiragana", i.kana, i.transliteration, "N/A");
-        }   
-        else if (search_value === temp_kana) {
-            insert_valRow(table_ID, "Hiragana", i.kana, i.transliteration, "N/A");
-        }
-    }
-};
-
-// Output Katakana search match to table.
-search_out_katakana = (search_value, table_ID) => {
-    for (var i of katakana) {
-        var temp_transliteration = trimAll(i.transliteration.toLowerCase());
-        var temp_kana = trimAll(i.kana.toLowerCase());
-
-        if (search_value === temp_transliteration) {
-            insert_valRow(table_ID, "Katakana", i.kana, i.transliteration, "N/A");
-        }   
-        else if (search_value === temp_kana) {
-            insert_valRow(table_ID, "Katakana", i.kana, i.transliteration, "N/A");
-        }
-    }
-};
-
-// Output Kanji search match to table.
-search_out_kanji = (search_value, table_ID) => {
-    for (var i of kanji) {
-        var temp_transliteration = trimAll(i.transliteration.toLowerCase());
-        var temp_kana = trimAll(i.kana.toLowerCase());
-        var temp_translation = trimAll(i.translation.toLowerCase());
-
-        if (search_value === temp_transliteration) {
-            insert_valRow(table_ID, "Kanji", i.kana, i.transliteration, i.translation);
-        }   
-        else if (search_value === temp_kana) {
-            insert_valRow(table_ID, "Kanji", i.kana, i.transliteration, i.translation);
-        }
-        else if (search_value === temp_translation) {
-            insert_valRow(table_ID, "Kanji", i.kana, i.transliteration, i.translation);
-        }
-    }
-};
-
-// Output General Hiragana search match to table.
-search_out_genHiragana = (search_value, table_ID) => {
-    for (var i of general_hiragana) {
-        var temp_transliteration = trimAll(i.transliteration.toLowerCase());
-        var temp_kana = trimAll(i.kana.toLowerCase());
-        var temp_translation = trimAll(i.translation.toLowerCase());
-
-        if (search_value === temp_transliteration) {
-            insert_valRow(table_ID, "General <br/> Hiragana", i.kana, i.transliteration, i.translation);
-        }   
-        else if (search_value === temp_kana) {
-            insert_valRow(table_ID, "General <br/> Hiragana", i.kana, i.transliteration, i.translation);
-        }
-        else if (search_value === temp_translation) {
-            insert_valRow(table_ID, "General <br/> Hiragana", i.kana, i.transliteration, i.translation);
-        }
-    }
-};
-
-// Output General Katakana search match to table.
-search_out_genKatakana = (search_value, table_ID) => {
-    for (var i of general_katakana) {
-        var temp_transliteration = trimAll(i.transliteration.toLowerCase());
-        var temp_kana = trimAll(i.kana.toLowerCase());
-        var temp_translation = trimAll(i.translation.toLowerCase());
-
-        if (search_value === temp_transliteration) {
-            insert_valRow(table_ID, "General <br/> Katakana", i.kana, i.transliteration, i.translation);
-        }   
-        else if (search_value === temp_kana) {
-            insert_valRow(table_ID, "General <br/> Katakana", i.kana, i.transliteration, i.translation);
-        }
-        else if (search_value === temp_translation) {
-            insert_valRow(table_ID, "General <br/> Katakana", i.kana, i.transliteration, i.translation);
-        }
-    }
-};
-
-// Output search match to empty table.
-search_out = (search_value, table_ID) => {
+// Check search_value argument for matches in dictionary argument and output to table.
+search_out = (search_value, dictionary, type, table_ID) => {
     var trimmed_value = trimAll(search_value.toLowerCase());
     var search_array = search_value.split(" ");
+    var type = type.toLowerCase();
 
-    if (search_value.length < 1) {
-        clear_table(); tableBGColor_black();
-    }
-    else if (isMatch(trimmed_value) === true) {
-        insert_headRow(table_ID);
-        search_out_hiragana(trimmed_value, table_ID);
-        search_out_katakana(trimmed_value, table_ID);
-        search_out_kanji(trimmed_value, table_ID);
-        search_out_genHiragana(trimmed_value, table_ID);
-        search_out_genKatakana(trimmed_value, table_ID);  
+    if (search_value.length > 0){
+        if (isMatch(trimmed_value, dictionary, type) === true) {
+            if (type === "hiragana" | type === "katakana") {
+                for (var node of dictionary) {
+                    var transliteration = trimAll(node.transliteration.toLowerCase());
+                    var kana = trimAll(node.kana.toLowerCase());
+            
+                    if (trimmed_value === transliteration | trimmed_value === kana) {
+                        insert_valRow(table_ID, type, node.kana, node.transliteration, "N/A");
+                    }   
+                }
+            }
+            else if (type === "kanji" | type === "general hiragana" | type === "general katakana") {
+                for (var node of dictionary) {
+                    var transliteration = trimAll(node.transliteration.toLowerCase());
+                    var kana = trimAll(node.kana.toLowerCase());
+                    var translation = trimAll(node.translation.toLowerCase());
+
+                    if (trimmed_value === transliteration | trimmed_value === kana | trimmed_value === translation) {
+                        insert_valRow(table_ID, type, node.kana, node.transliteration, node.translation);
+                    }   
+                }  
+            }
+            else {
+                console.log("There's no proper type designated within the type argument.")
+            }
+        }
+        else {
+            for (var value of search_array) {
+                value = trimAll(value.toLowerCase());
+
+                if (type === "hiragana" | type === "katakana") {
+                    for (var node of dictionary) {
+                        var transliteration = trimAll(node.transliteration.toLowerCase());
+                        var kana = trimAll(node.kana.toLowerCase());
+                
+                        if (value === transliteration | value === kana) {
+                            insert_valRow(table_ID, type, node.kana, node.transliteration, "N/A");
+                        }   
+                    } 
+                }
+                else if (type === "kanji" | type === "general hiragana" | type === "general katakana") {
+                    for (var node of dictionary) {
+                        var transliteration = trimAll(node.transliteration.toLowerCase());
+                        var kana = trimAll(node.kana.toLowerCase());
+                        var translation = trimAll(node.translation.toLowerCase());
+    
+                        if (value === transliteration | value === kana | value === translation) {
+                            insert_valRow(table_ID, type, node.kana, node.transliteration, node.translation);
+                        }   
+                    }
+                }
+                else {
+                    console.log("There's no proper type designated within the type argument.")
+                }
+            }
+        }
     }
     else {
-        insert_headRow(table_ID);
-
-        for (var j of search_array) {
-            j = trimAll(j.toLowerCase());
-                         
-            search_out_hiragana(j, table_ID);
-            search_out_katakana(j, table_ID);
-            search_out_kanji(j, table_ID);
-            search_out_genHiragana(j, table_ID);
-            search_out_genKatakana(j, table_ID);
-        }
-    }    
+        clear_table(); tableBGColor_black();
+        console.log("Search query is empty.");
+    }
 };
 
 // Handle the search submission.
 search_handler = () => {
     var search_value = document.getElementById("search-box").value;
-    tableBGColor_smoke(); clear_table();
-    search_out(search_value, "search-output"); 
-    search_log(search_value);
+    
+    insert_headRow("search-output")
+
+    search_out(search_value, hiragana, "hiragana", "search-output");
+    search_out(search_value, katakana, "katakana", "search-output"); 
+    search_out(search_value, kanji, "kanji", "search-output");
+    search_out(search_value, general_hiragana, "general hiragana", "search-output");
+    search_out(search_value, general_katakana, "general katakana", "search-output"); 
+
+    search_log(search_value, hiragana, "hiragana");
+    search_log(search_value, katakana, "katakana");
+    search_log(search_value, kanji, "kanji");
+    search_log(search_value, general_hiragana, "general hiragana");
+    search_log(search_value, general_katakana, "general katakana");
 };
