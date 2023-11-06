@@ -1,13 +1,13 @@
-// Check search_value argument for matches in dictionary argument and log to console.
-search_log = (search_value, dictionary) => {
+// Check search_value argument for matches in nodeContainer argument and log to console.
+search_log = (search_value, nodeContainer) => {
     var trimmed_value = trimAll(search_value.toLowerCase());
     var search_array = search_value.split(" ");
-    var type = dictionary[0].type.toLowerCase();
+    var type = nodeContainer[0].type.toLowerCase();
 
     if (search_value.length > 0){
-        if (isMatch(trimmed_value, dictionary) === true) {
+        if (isMatch(trimmed_value, nodeContainer) === true) {
             if (type === "hiragana" | type === "katakana") {
-                for (var node of dictionary) {
+                for (var node of nodeContainer) {
                     var transliteration = trimAll(node.transliteration.toLowerCase());
                     var kana = trimAll(node.kana.toLowerCase());
             
@@ -18,7 +18,7 @@ search_log = (search_value, dictionary) => {
             }
 
             if (type === "kanji" | type === "general hiragana" | type === "general katakana") {
-                for (var node of dictionary) {
+                for (var node of nodeContainer) {
                     var transliteration = trimAll(node.transliteration.toLowerCase());
                     var kana = trimAll(node.kana.toLowerCase());
                     var translation = trimAll(node.translation.toLowerCase());
@@ -34,7 +34,7 @@ search_log = (search_value, dictionary) => {
                 value = trimAll(value.toLowerCase());
 
                 if (type === "hiragana" | type === "katakana") {
-                    for (var node of dictionary) {
+                    for (var node of nodeContainer) {
                         var transliteration = trimAll(node.transliteration.toLowerCase());
                         var kana = trimAll(node.kana.toLowerCase());
                 
@@ -45,7 +45,7 @@ search_log = (search_value, dictionary) => {
                 }
 
                 if (type === "kanji" | type === "general hiragana" | type === "general katakana") {
-                    for (var node of dictionary) {
+                    for (var node of nodeContainer) {
                         var transliteration = trimAll(node.transliteration.toLowerCase());
                         var kana = trimAll(node.kana.toLowerCase());
                         var translation = trimAll(node.translation.toLowerCase());
@@ -64,11 +64,11 @@ search_log = (search_value, dictionary) => {
 };
 
 // Return true or false for whether a direct translation, transliteration, or kana symbol exists within the objects.
-isMatch = (search_value, dictionary) => {
-    var type = dictionary[0].type.toLowerCase();
+isMatch = (search_value, nodeContainer) => {
+    var type = nodeContainer[0].type.toLowerCase();
 
     if (type === "hiragana" | type === "katakana") { 
-        for (var node of dictionary) {
+        for (var node of nodeContainer) {
             var transliteration = trimAll(node.transliteration.toLowerCase());
             var kana = trimAll(node.kana.toLowerCase());
     
@@ -79,7 +79,7 @@ isMatch = (search_value, dictionary) => {
     }
 
     if (type === "kanji" | type === "general hiragana" | type === "general katakana") {
-        for (var node of dictionary) {
+        for (var node of nodeContainer) {
             var transliteration = trimAll(node.transliteration.toLowerCase());
             var kana = trimAll(node.kana.toLowerCase());
             var translation = trimAll(node.translation.toLowerCase());
@@ -123,16 +123,16 @@ insert_valueRow = (table_ID, type, kana, transliteration, translation) => {
     translationValue.innerHTML = translation;
 };
 
-// Check search_value argument for matches in dictionary argument and output to table.
-search_out = (search_value, dictionary, table_ID) => {
+// Check search_value argument for matches in nodeContainer argument and output to table.
+search_out = (search_value, nodeContainer, table_ID) => {
     var trimmed_value = trimAll(search_value.toLowerCase());
     var search_array = search_value.split(" ");
-    var type = dictionary[0].type.toLowerCase();
+    var type = nodeContainer[0].type.toLowerCase();
 
     if (search_value.length > 0){
-        if (isMatch(trimmed_value, dictionary) === true) {
+        if (isMatch(trimmed_value, nodeContainer) === true) {
             if (type === "hiragana" | type === "katakana") {
-                for (var node of dictionary) {
+                for (var node of nodeContainer) {
                     var transliteration = trimAll(node.transliteration.toLowerCase());
                     var kana = trimAll(node.kana.toLowerCase());
             
@@ -143,7 +143,7 @@ search_out = (search_value, dictionary, table_ID) => {
             }
 
             if (type === "kanji" | type === "general hiragana" | type === "general katakana") {
-                for (var node of dictionary) {
+                for (var node of nodeContainer) {
                     var transliteration = trimAll(node.transliteration.toLowerCase());
                     var kana = trimAll(node.kana.toLowerCase());
                     var translation = trimAll(node.translation.toLowerCase());
@@ -159,7 +159,7 @@ search_out = (search_value, dictionary, table_ID) => {
                 value = trimAll(value.toLowerCase());
 
                 if (type === "hiragana" | type === "katakana") {
-                    for (var node of dictionary) {
+                    for (var node of nodeContainer) {
                         var transliteration = trimAll(node.transliteration.toLowerCase());
                         var kana = trimAll(node.kana.toLowerCase());
                 
@@ -170,7 +170,7 @@ search_out = (search_value, dictionary, table_ID) => {
                 }
                 
                 if (type === "kanji" | type === "general hiragana" | type === "general katakana") {
-                    for (var node of dictionary) {
+                    for (var node of nodeContainer) {
                         var transliteration = trimAll(node.transliteration.toLowerCase());
                         var kana = trimAll(node.kana.toLowerCase());
                         var translation = trimAll(node.translation.toLowerCase());
