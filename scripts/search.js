@@ -37,7 +37,7 @@ search_log = (search_value, nodeContainer) => {
     }
 };
 
-// Return true or false for whether a direct translation, transliteration, or kana symbol exists within the objects.
+// Return true or false for whether a translation, transliteration, or kana symbol exists within the nodeContainer argument.
 isMatch = (search_value, nodeContainer) => {
     for (var node of nodeContainer) {
         var transliteration = trimAll(node.transliteration.toLowerCase());
@@ -52,7 +52,7 @@ isMatch = (search_value, nodeContainer) => {
     return false
 };
 
-// Insert header row into the table. Add header values.
+// Insert head row into table and add values.
 insert_headRow = (table_ID) => {
     var table = document.getElementById(table_ID);
     var headRow = table.insertRow(0);
@@ -67,7 +67,7 @@ insert_headRow = (table_ID) => {
     translationHead.innerHTML = "<b>Translation</b>";
 };
 
-// Insert row of kana, transliteration, and translation values matching the into a new row within the table.
+// Insert value row into table and add values.
 insert_valueRow = (table_ID, type, kana, transliteration, translation) => {
     var table = document.getElementById(table_ID);
     var valueRow = table.insertRow(-1);
