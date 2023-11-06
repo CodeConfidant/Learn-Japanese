@@ -109,18 +109,18 @@ insert_headRow = (table_ID) => {
 };
 
 // Insert row of kana, transliteration, and translation values matching the into a new row within the table.
-insert_valRow = (table_ID, type, kana, transliteration, translation) => {
+insert_valueRow = (table_ID, type, kana, transliteration, translation) => {
     var table = document.getElementById(table_ID);
-    var valRow = table.insertRow(-1);
-    var typeVal = valRow.insertCell(0);
-    var kanaVal = valRow.insertCell(1);
-    var transliterationVal = valRow.insertCell(2);
-    var translationVal = valRow.insertCell(3);
+    var valueRow = table.insertRow(-1);
+    var typeValue = valueRow.insertCell(0);
+    var kanaValue = valueRow.insertCell(1);
+    var transliterationValue = valueRow.insertCell(2);
+    var translationValue = valueRow.insertCell(3);
 
-    typeVal.innerHTML = type;
-    kanaVal.innerHTML = kana;
-    transliterationVal.innerHTML = transliteration;
-    translationVal.innerHTML = translation;
+    typeValue.innerHTML = type;
+    kanaValue.innerHTML = kana;
+    transliterationValue.innerHTML = transliteration;
+    translationValue.innerHTML = translation;
 };
 
 // Check search_value argument for matches in dictionary argument and output to table.
@@ -137,7 +137,7 @@ search_out = (search_value, dictionary, table_ID) => {
                     var kana = trimAll(node.kana.toLowerCase());
             
                     if (trimmed_value === transliteration | trimmed_value === kana) {
-                        insert_valRow(table_ID, node.type, node.kana, node.transliteration, "N/A");
+                        insert_valueRow(table_ID, node.type, node.kana, node.transliteration, "N/A");
                     }   
                 }
             }
@@ -149,7 +149,7 @@ search_out = (search_value, dictionary, table_ID) => {
                     var translation = trimAll(node.translation.toLowerCase());
 
                     if (trimmed_value === transliteration | trimmed_value === kana | trimmed_value === translation) {
-                        insert_valRow(table_ID, node.type, node.kana, node.transliteration, node.translation);
+                        insert_valueRow(table_ID, node.type, node.kana, node.transliteration, node.translation);
                     }   
                 }  
             }
@@ -164,7 +164,7 @@ search_out = (search_value, dictionary, table_ID) => {
                         var kana = trimAll(node.kana.toLowerCase());
                 
                         if (value === transliteration | value === kana) {
-                            insert_valRow(table_ID, node.type, node.kana, node.transliteration, "N/A");
+                            insert_valueRow(table_ID, node.type, node.kana, node.transliteration, "N/A");
                         }   
                     } 
                 }
@@ -176,7 +176,7 @@ search_out = (search_value, dictionary, table_ID) => {
                         var translation = trimAll(node.translation.toLowerCase());
     
                         if (value === transliteration | value === kana | value === translation) {
-                            insert_valRow(table_ID, node.type, node.kana, node.transliteration, node.translation);
+                            insert_valueRow(table_ID, node.type, node.kana, node.transliteration, node.translation);
                         }   
                     }
                 }
@@ -192,14 +192,15 @@ search_out = (search_value, dictionary, table_ID) => {
 // Handle the search submission.
 search_handler = () => {
     var search_value = document.getElementById("search-box").value;
-    
-    insert_headRow("search-output")
+    var table_ID = "search-output"
 
-    search_out(search_value, hiragana, "search-output");
-    search_out(search_value, katakana, "search-output"); 
-    search_out(search_value, kanji, "search-output");
-    search_out(search_value, general_hiragana, "search-output");
-    search_out(search_value, general_katakana, "search-output"); 
+    insert_headRow(table_ID)
+
+    search_out(search_value, hiragana, table_ID);
+    search_out(search_value, katakana, table_ID); 
+    search_out(search_value, kanji, table_ID);
+    search_out(search_value, general_hiragana, table_ID);
+    search_out(search_value, general_katakana, table_ID); 
 
     search_log(search_value, hiragana);
     search_log(search_value, katakana);
