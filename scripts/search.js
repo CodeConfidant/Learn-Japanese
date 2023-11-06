@@ -2,59 +2,33 @@
 search_log = (search_value, nodeContainer) => {
     var trimmed_value = trimAll(search_value.toLowerCase());
     var search_array = search_value.split(" ");
-    var type = nodeContainer[0].type.toLowerCase();
 
     if (search_value.length > 0){
         if (isMatch(trimmed_value, nodeContainer) === true) {
-            if (type === "hiragana" | type === "katakana") {
-                for (var node of nodeContainer) {
-                    var transliteration = trimAll(node.transliteration.toLowerCase());
-                    var kana = trimAll(node.kana.toLowerCase());
             
-                    if (trimmed_value === transliteration | trimmed_value === kana) {
-                        console.log(node);
-                    }   
-                }
-            }
+            for (var node of nodeContainer) {
+                var transliteration = trimAll(node.transliteration.toLowerCase());
+                var kana = trimAll(node.kana.toLowerCase());
+                var translation = trimAll(node.translation.toLowerCase());
 
-            if (type === "kanji" | type === "general hiragana" | type === "general katakana") {
-                for (var node of nodeContainer) {
-                    var transliteration = trimAll(node.transliteration.toLowerCase());
-                    var kana = trimAll(node.kana.toLowerCase());
-                    var translation = trimAll(node.translation.toLowerCase());
-
-                    if (trimmed_value === transliteration | trimmed_value === kana | trimmed_value === translation) {
-                        console.log(node);
-                    }   
-                }
+                if (trimmed_value === transliteration | trimmed_value === kana | trimmed_value === translation) {
+                    console.log(node);
+                }   
             }
         }
         else {
             for (var value of search_array) {
                 value = trimAll(value.toLowerCase());
 
-                if (type === "hiragana" | type === "katakana") {
-                    for (var node of nodeContainer) {
-                        var transliteration = trimAll(node.transliteration.toLowerCase());
-                        var kana = trimAll(node.kana.toLowerCase());
-                
-                        if (value === transliteration | value === kana) {
-                            console.log(node);
-                        }   
-                    }
-                }
+                for (var node of nodeContainer) {
+                    var transliteration = trimAll(node.transliteration.toLowerCase());
+                    var kana = trimAll(node.kana.toLowerCase());
+                    var translation = trimAll(node.translation.toLowerCase());
 
-                if (type === "kanji" | type === "general hiragana" | type === "general katakana") {
-                    for (var node of nodeContainer) {
-                        var transliteration = trimAll(node.transliteration.toLowerCase());
-                        var kana = trimAll(node.kana.toLowerCase());
-                        var translation = trimAll(node.translation.toLowerCase());
-    
-                        if (value === transliteration | value === kana | value === translation) {
-                            console.log(node);
-                        }   
-                    }
-                }  
+                    if (value === transliteration | value === kana | value === translation) {
+                        console.log(node);
+                    }   
+                }
             }
         }
     }
@@ -65,31 +39,16 @@ search_log = (search_value, nodeContainer) => {
 
 // Return true or false for whether a direct translation, transliteration, or kana symbol exists within the objects.
 isMatch = (search_value, nodeContainer) => {
-    var type = nodeContainer[0].type.toLowerCase();
+    for (var node of nodeContainer) {
+        var transliteration = trimAll(node.transliteration.toLowerCase());
+        var kana = trimAll(node.kana.toLowerCase());
+        var translation = trimAll(node.translation.toLowerCase());
 
-    if (type === "hiragana" | type === "katakana") { 
-        for (var node of nodeContainer) {
-            var transliteration = trimAll(node.transliteration.toLowerCase());
-            var kana = trimAll(node.kana.toLowerCase());
-    
-            if (search_value === transliteration | search_value === kana) {
-                return true
-            }   
-        } 
+        if (search_value === transliteration | search_value === kana | search_value === translation) {
+            return true
+        }   
     }
-
-    if (type === "kanji" | type === "general hiragana" | type === "general katakana") {
-        for (var node of nodeContainer) {
-            var transliteration = trimAll(node.transliteration.toLowerCase());
-            var kana = trimAll(node.kana.toLowerCase());
-            var translation = trimAll(node.translation.toLowerCase());
-
-            if (search_value === transliteration | search_value === kana | search_value === translation) {
-                return true
-            }   
-        }
-    }
-
+   
     return false
 };
 
@@ -102,10 +61,10 @@ insert_headRow = (table_ID) => {
     var transliterationHead = headRow.insertCell(2);
     var translationHead = headRow.insertCell(3);
 
-    typeHead.innerHTML = "Type";
-    kanaHead.innerHTML = "Kana";
-    transliterationHead.innerHTML = "Transliteration";
-    translationHead.innerHTML = "Translation";
+    typeHead.innerHTML = "<b>Type</b>";
+    kanaHead.innerHTML = "<b>Kana</b>";
+    transliterationHead.innerHTML = "<b>Transliteration</b>";
+    translationHead.innerHTML = "<b>Translation</b>";
 };
 
 // Insert row of kana, transliteration, and translation values matching the into a new row within the table.
@@ -127,58 +86,31 @@ insert_valueRow = (table_ID, type, kana, transliteration, translation) => {
 search_out = (search_value, nodeContainer, table_ID) => {
     var trimmed_value = trimAll(search_value.toLowerCase());
     var search_array = search_value.split(" ");
-    var type = nodeContainer[0].type.toLowerCase();
 
     if (search_value.length > 0){
         if (isMatch(trimmed_value, nodeContainer) === true) {
-            if (type === "hiragana" | type === "katakana") {
-                for (var node of nodeContainer) {
-                    var transliteration = trimAll(node.transliteration.toLowerCase());
-                    var kana = trimAll(node.kana.toLowerCase());
-            
-                    if (trimmed_value === transliteration | trimmed_value === kana) {
-                        insert_valueRow(table_ID, node.type, node.kana, node.transliteration, "N/A");
-                    }   
-                }
-            }
+            for (var node of nodeContainer) {
+                var transliteration = trimAll(node.transliteration.toLowerCase());
+                var kana = trimAll(node.kana.toLowerCase());
+                var translation = trimAll(node.translation.toLowerCase());
 
-            if (type === "kanji" | type === "general hiragana" | type === "general katakana") {
+                if (trimmed_value === transliteration | trimmed_value === kana | trimmed_value === translation) {
+                    insert_valueRow(table_ID, node.type, node.kana, node.transliteration, node.translation);
+                }   
+            }  
+        }
+        else {
+            for (var value of search_array) {
+                value = trimAll(value.toLowerCase());
+               
                 for (var node of nodeContainer) {
                     var transliteration = trimAll(node.transliteration.toLowerCase());
                     var kana = trimAll(node.kana.toLowerCase());
                     var translation = trimAll(node.translation.toLowerCase());
 
-                    if (trimmed_value === transliteration | trimmed_value === kana | trimmed_value === translation) {
+                    if (value === transliteration | value === kana | value === translation) {
                         insert_valueRow(table_ID, node.type, node.kana, node.transliteration, node.translation);
                     }   
-                }  
-            }
-        }
-        else {
-            for (var value of search_array) {
-                value = trimAll(value.toLowerCase());
-
-                if (type === "hiragana" | type === "katakana") {
-                    for (var node of nodeContainer) {
-                        var transliteration = trimAll(node.transliteration.toLowerCase());
-                        var kana = trimAll(node.kana.toLowerCase());
-                
-                        if (value === transliteration | value === kana) {
-                            insert_valueRow(table_ID, node.type, node.kana, node.transliteration, "N/A");
-                        }   
-                    } 
-                }
-                
-                if (type === "kanji" | type === "general hiragana" | type === "general katakana") {
-                    for (var node of nodeContainer) {
-                        var transliteration = trimAll(node.transliteration.toLowerCase());
-                        var kana = trimAll(node.kana.toLowerCase());
-                        var translation = trimAll(node.translation.toLowerCase());
-    
-                        if (value === transliteration | value === kana | value === translation) {
-                            insert_valueRow(table_ID, node.type, node.kana, node.transliteration, node.translation);
-                        }   
-                    }
                 }
             }
         }
@@ -199,12 +131,8 @@ search_handler = () => {
     search_out(search_value, hiragana, table_ID);
     search_out(search_value, katakana, table_ID); 
     search_out(search_value, kanji, table_ID);
-    search_out(search_value, general_hiragana, table_ID);
-    search_out(search_value, general_katakana, table_ID); 
 
     search_log(search_value, hiragana);
     search_log(search_value, katakana);
     search_log(search_value, kanji);
-    search_log(search_value, general_hiragana);
-    search_log(search_value, general_katakana);
 };
